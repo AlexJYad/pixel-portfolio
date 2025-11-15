@@ -1,0 +1,16 @@
+:root {
+   /* Dark Theme */
+   --color-bg: #303338;
+   --color-text: #faf8f0;
+   --color-shadow: #212225;
+   --color-accent-1: #f5c243;
+   --color-accent-2: #efce92;
+   --color-accent-3: #92e2ef;
+
+   /* Light Theme */
+   --color-bg-light: #f5e1c1;
+   --color-text-light: #303338;
+   --color-accent-light-1: #f5c243;
+   --color-accent-light-2: #efce92;
+   --color-accent-light-3: #92e2ef;
+}

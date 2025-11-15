@@ -1,0 +1,89 @@
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem 2rem;
+   transition: background-color 0.3s, color 0.3s;
+}
+
+/* Тёмная тема */
+.dark-theme .header {
+   background-color: var(--color-bg);
+   color: var(--color-text);
+}
+
+/* Светлая тема */
+.light-theme .header {
+   background-color: var(--color-bg-light);
+   color: var(--color-text-light);
+}
+
+.header__logo {
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+
+.header__nav a {
+   margin-left: 1.5rem;
+   text-decoration: none;
+   font-weight: 500;
+   transition: color 0.2s;
+}
+
+.dark-theme .header .header__nav a {
+   color: var(--color-text);
+}
+
+.light-theme .header .header__nav a {
+   color: var(--color-text-light);
+}
+
+.dark-theme .header .header__nav a:hover {
+   color: var(--color-accent-1);
+}
+
+.light-theme .header .header__nav a:hover {
+   color: var(--color-accent-light-1);
+}
+
+.header__resume {
+   border: 1px solid var(--color-accent-1);
+   padding: 0.3rem 0.7rem;
+   border-radius: 4px;
+   margin-left: 1rem;
+   transition: all 0.2s;
+}
+
+.dark-theme .header .header__resume:hover {
+   background-color: var(--color-accent-2);
+   color: var(--color-bg);
+}
+
+.light-theme .header .header__resume:hover {
+   background-color: var(--color-accent-light-2);
+   color: var(--color-text-light);
+}
+
+.header__btn {
+   margin-left: 1rem;
+   padding: 0.3rem 0.6rem;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 1rem;
+   transition: all 0.2s;
+}
+
+.dark-theme .header .header__btn {
+   background-color: var(--color-shadow);
+   color: var(--color-bg);
+}
+
+.light-theme .header .header__btn {
+   background-color: var(--color-accent-light-2);
+   color: var(--color-text-light);
+}
+
+.header__btn:hover {
+   opacity: 0.8;
+}
