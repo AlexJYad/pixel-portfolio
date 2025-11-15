@@ -1,16 +1,146 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎮 Pixel Portfolio — React + Vite
 
-Currently, two official plugins are available:
+**Interactive Game-Style Developer Portfolio**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is my personal developer portfolio website, built in pixel-art style inspired by classic computer games.  
+The site includes:
 
-## React Compiler
+- 📌 **Main Screen** with a short introduction and pixel avatar  
+- 🎚️ **Skills Panel** with animated skill counters  
+- 📜 **Interactive Timeline** (Education → Work → Relocation → Courses)  
+- 🗂️ **Portfolio Page**  
+- 🧭 **Header** with navigation + “Download Resume” button  
+- 🔗 **Footer** with social links
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Technologies & Tools
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white) ![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?logo=framer&logoColor=white) ![License MIT](https://img.shields.io/badge/License-MIT-green)
+
+- CSS Modules / Component-Scoped CSS  
+- Framer Motion (animations)  
+- react-scroll / scroll-trigger (dynamic timeline)
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+  components/
+  pages/
+  styles/
+  assets/
+  App.jsx
+  main.jsx
+```
+
+---
+
+## 🔧 Installation
+
+```bash
+git clone https://github.com/AlexJYad/pixel-portfolio.git
+cd pixel-portfolio
+npm install
+npm run dev
+```
+
+---
+
+## 📌 Project Goals
+
+- Showcase React skills  
+- Demonstrate Git and GitHub workflow  
+- Create a memorable game-style portfolio website
+
+---
+
+# 🎮 Портфолио Pixel — React + Vite
+
+**Интерактивное портфолио разработчика в стиле компьютерной игры**
+
+Мой персональный сайт-портфолио, выполненный в стиле пиксель-арта и интерфейсов классических игр.  
+Сайт включает:
+
+- 📌 **Главный экран** с кратким описанием и пиксель-аватаром  
+- 🎚️ **Панель навыков** с анимацией счётчиков  
+- 📜 **Интерактивный таймлайн** (Образование → Работа → Переезд → Курсы)  
+- 🗂️ **Страница портфолио**  
+- 🧭 **Хедер** с навигацией + кнопка «Скачать резюме»  
+- 🔗 **Футер** с ссылками на соцсети
+
+---
+
+## 🚀 Технологии & Инструменты
+
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white) ![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?logo=framer&logoColor=white) ![License MIT](https://img.shields.io/badge/License-MIT-green)
+
+- CSS Modules / Стили на уровне компонента  
+- Framer Motion (анимации)  
+- react-scroll / scroll-trigger (динамический таймлайн)
+
+---
+
+## 📁 Структура проекта
+
+```
+src/
+  components/
+  pages/
+  styles/
+  assets/
+  App.jsx
+  main.jsx
+```
+
+---
+
+## 🔧 Установка
+
+```bash
+git clone https://github.com/AlexJYad/pixel-portfolio.git
+cd pixel-portfolio
+npm install
+npm run dev
+```
+
+---
+
+## 📌 Цели проекта
+
+- Показать навыки работы с React  
+- Продемонстрировать работу с Git и GitHub Flow  
+- Создать запоминающееся портфолио в игровом стиле
+
+
+---
+
+## 📈 Development Plan / План развития сайта
+
+### Main Screen / Главный экран
+- [ ] Add pixel avatar / Добавить пиксель-аватар
+- [ ] Add short introduction / Добавить краткое описание
+- [ ] Animate skill counters / Анимировать счётчики навыков
+
+### Timeline / Таймлайн
+- [ ] Create chronological component / Создать хронологический компонент
+- [ ] Add education/work/relocation/events / Добавить образование, работу, переезд, курсы
+- [ ] Add scroll-trigger animations / Добавить анимацию при прокрутке
+
+### Header & Footer / Хедер и футер
+- [ ] Create header component with navigation / Создать компонент хедера с навигацией
+- [ ] Add “Download Resume” button / Добавить кнопку “Скачать резюме”
+- [ ] Create footer component with social links / Создать футер с ссылками на соцсети
+
+### Portfolio Page / Страница портфолио
+- [ ] Add projects section / Добавить секцию проектов
+- [ ] Add filters / Добавить фильтры проектов
+- [ ] Add project cards with animations / Добавить карточки проектов с анимацией
+
+### Enhancements / Улучшения
+- [ ] Add dark/light mode / Добавить светлую/тёмную тему
+- [ ] Multi-language support / Поддержка нескольких языков
+- [ ] Optimize for mobile / Оптимизация под мобильные устройства
