@@ -30,12 +30,19 @@ const Header = () => {
                {language === "EN" ? "Portfolio" : "Портфолио"}
             </a>
             <a href="#contact">{language === "EN" ? "Contact" : "Контакты"}</a>
+
             {/* Файл заглужка - надо потом изменить */}
-            <a href="/resume.pdf" className="header__resume" download>
-               {language === "EN" ? "Download Resume" : "Скачать Резюме"}
+            <a href="/resume.pdf" className="header__resume tooltip" download>
+               <i class="bi bi-file-earmark-arrow-down"></i>
+               <span className="tooltip__text">Download CV</span>
             </a>
+
             <button className="header__btn" onClick={toggleTheme}>
-               {darkMode ? "🌙" : "☀️"}
+               {!darkMode ? (
+                  <i className="bi bi-lightbulb-off"></i>
+               ) : (
+                  <i className="bi bi-lightbulb-fill"></i>
+               )}
             </button>
             <button className="header__btn" onClick={toggleLanguage}>
                {language}

@@ -1,0 +1,65 @@
+.footer {
+   padding: 1rem;
+   background-color: var(--color-bg-light);
+   color: var(--color-text-light);
+   text-align: center;
+   border-top: 2px solid var(--color-accent-2);
+   transition: background-color 0.3s, color 0.3s;
+   box-sizing: border-box;
+}
+
+/* Тёмная тема */
+.dark-theme .footer {
+   background-color: var(--color-bg);
+   color: var(--color-text);
+}
+
+/* Светлая тема */
+.light-theme .footer {
+   background-color: var(--color-bg-light);
+   color: var(--color-text-light);
+}
+
+.footer a {
+   margin: 0 0.5rem;
+   text-decoration: none;
+   color: inherit;
+}
+
+.dark-theme .footer .footer__socials a {
+   color: var(--color-text);
+}
+
+.light-theme .footer .footer__socials a {
+   color: var(--color-text-light);
+}
+
+.dark-theme .footer .footer__socials a:hover {
+   color: var(--color-accent-1);
+}
+
+.light-theme .footer .footer__socials a:hover {
+   color: var(--color-accent-light-1);
+}
+
+.dark-theme .terraria-striped {
+   background: repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0px,
+      rgba(0, 0, 0, 0.5) 4px,
+      rgba(0, 0, 0, 0.4) 4px,
+      rgba(0, 0, 0, 0.4) 8px
+   );
+   padding: 16px;
+}
+
+.light-theme .terraria-striped {
+   background: repeating-linear-gradient(
+      to bottom,
+      rgba(239, 206, 146, 0.5) 0px,
+      rgba(239, 206, 146, 0.5) 4px,
+      rgba(239, 206, 146, 0.4) 4px,
+      rgba(239, 206, 146, 0.4) 8px
+   );
+   padding: 16px;
+}
