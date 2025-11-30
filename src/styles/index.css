@@ -18,7 +18,7 @@ body {
    font-family: var(--font-mono);
    line-height: 1.5;
    font-weight: 400;
-   font-size: 20px;
+   font-size: 23px;
    font-synthesis: none;
    text-rendering: optimizeLegibility;
    -webkit-font-smoothing: antialiased;
@@ -29,18 +29,10 @@ body {
    min-height: 100vh;
 }
 
-body.dark-theme {
-   background-color: var(--color-bg);
-   color: white;
-}
-body.light-theme {
-   background-color: var(--color-bg-light);
-   color: black;
-}
-
 h1 {
-   font-size: 3.2em;
+   font-size: 1.3em;
    line-height: 1.1;
+   margin: 5px;
 }
 
 .tooltip {
@@ -59,12 +51,79 @@ h1 {
    color: var(--color-text);
    font-size: 16px;
    padding: 6px 8px;
-   border-radius: 4px;
    white-space: nowrap;
    transition: 0.2s ease;
+   box-shadow: 5px 5px black;
 }
 
 .tooltip:hover .tooltip__text {
    visibility: visible;
    opacity: 1;
+}
+
+.btn {
+   color: #fff;
+   margin: 10px;
+   border: 0;
+   box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black,
+      0px 10px #00000038, 5px 5px #00000038, -5px 5px #00000038,
+      inset 0px 5px rgba(255, 255, 255, 0.3);
+   cursor: pointer;
+   display: inline-block;
+}
+
+.btn:hover:active {
+   transform: translateY(5px);
+   box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black,
+      inset 0px 5px #00000038;
+}
+
+.btn:hover {
+   opacity: 0.7;
+}
+
+/* ===== DARK-THEME ===== */
+
+body.dark-theme {
+   background-color: var(--color-bg);
+   color: white;
+}
+
+.dark-theme {
+   a {
+      color: var(--color-text);
+   }
+
+   a:hover {
+      color: var(--color-accent-1);
+   }
+
+   .btn {
+      background-color: #38667f;
+      color: var(--color-bg);
+      box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black,
+         0px 10px #00000038, 5px 5px #00000038, -5px 5px #00000038,
+         inset 0px 5px rgba(255, 255, 255, 0.1);
+   }
+}
+
+/* ===== LIGHT-THEME ===== */
+
+body.light-theme {
+   background-color: var(--color-bg-light);
+   color: black;
+}
+
+.light-theme {
+   a {
+      color: var(--color-text-light);
+   }
+
+   a:hover {
+      color: var(--color-accent-3);
+   }
+   .btn {
+      background-color: #e6ba61;
+      color: var(--color-bg);
+   }
 }

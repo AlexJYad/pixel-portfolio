@@ -20,31 +20,41 @@ const Header = () => {
 
    return (
       <header className="header">
-         <div className="header__logo">PixelPortfolio</div>
+         <div className="header__logo">
+            <h1>PixelPortfolio</h1>
+         </div>
          <nav className="header__nav">
-            <a href="#main">{language === "EN" ? "Home" : "Главная"}</a>
-            <a href="#timeline">
+            <a href="#main" className="btn">
+               {language === "EN" ? "Home" : "Главная"}
+            </a>
+            <a href="#timeline" className="btn">
                {language === "EN" ? "Timeline" : "Хронология"}
             </a>
-            <a href="#portfolio">
+            <a href="#portfolio" className="btn">
                {language === "EN" ? "Portfolio" : "Портфолио"}
             </a>
-            <a href="#contact">{language === "EN" ? "Contact" : "Контакты"}</a>
+            <a href="#contact" className="btn">
+               {language === "EN" ? "Contact" : "Контакты"}
+            </a>
 
             {/* Файл заглужка - надо потом изменить */}
-            <a href="/resume.pdf" className="header__resume tooltip" download>
+            <a
+               href="/resume.pdf"
+               className="header__resume header__btn tooltip btn"
+               download
+            >
                <i class="bi bi-file-earmark-arrow-down"></i>
                <span className="tooltip__text">Download CV</span>
             </a>
 
-            <button className="header__btn" onClick={toggleTheme}>
+            <button className="header__btn btn" onClick={toggleTheme}>
                {!darkMode ? (
                   <i className="bi bi-lightbulb-off"></i>
                ) : (
                   <i className="bi bi-lightbulb-fill"></i>
                )}
             </button>
-            <button className="header__btn" onClick={toggleLanguage}>
+            <button className="header__btn btn" onClick={toggleLanguage}>
                {language}
             </button>
          </nav>
