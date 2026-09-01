@@ -2,14 +2,17 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: 1rem 2rem;
+   padding: 0 2rem;
    transition: background-color 0.3s, color 0.3s;
    border-bottom: 5px solid var(--color-accent-2);
+   height: 6em;
 }
 
 .header__logo {
-   font-size: 2rem;
-   font-weight: bold;
+   font-size: 2.3rem;
+   h1 {
+      font-family: var(--font-pixel);
+   }
 }
 
 .header__nav {

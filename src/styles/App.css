@@ -12,11 +12,28 @@ header {
    box-sizing: border-box;
 }
 
-.main {
-   height: 1000px;
+.main-container {
+   height: calc(100vh - 6em);
+   overflow-y: scroll;
+   scroll-snap-type: y mandatory; /* вертикальный скролл, обязательное прилипание */
+   scroll-behavior: smooth;
+}
+
+.section {
+   height: calc(100vh - 6em);
+   scroll-snap-align: start; /* прилипаем к началу секции */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0 10%;
+}
+.section:last-child {
+   height: calc(100vh - 6em - 105px); /* вычитаем футер (60px) */
 }
 
 footer {
+   height: 105px;
    flex-shrink: 0;
    min-width: 100%;
+   scroll-snap-align: end; /* секция «прилипает» последней */
 }
