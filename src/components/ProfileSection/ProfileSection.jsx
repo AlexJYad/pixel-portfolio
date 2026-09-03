@@ -3,7 +3,7 @@ import "./ProfileSection.css";
 
 function ProfileSection() {
    return (
-      <section className="profile-section">
+      <section className="profile-section" id="main">
          <div className="profile-avatar">
             <div className="profile-avatar-frame">
                <img src="/images/my-photo-2.png" alt="My Photo" />
@@ -113,9 +113,7 @@ function ProfileSection() {
          </div>
 
          <div className="profile-start">
-            <div className="profile-start-point">
-               <i class="bi bi-balloon-heart"></i>
-            </div>
+            <div className="profile-start-point"></div>
             <div className="profile-start-point-line"></div>
          </div>
       </section>

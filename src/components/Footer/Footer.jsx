@@ -12,7 +12,7 @@ const Footer = () => {
    };
 
    return (
-      <footer className="footer terraria-striped">
+      <footer className="footer terraria-striped" id="contact">
          <div className="footer__socials">
             <a
                href="https://www.linkedin.com/in/aleksandr-iakovlev-702478284/"
