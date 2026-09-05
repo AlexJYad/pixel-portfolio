@@ -121,12 +121,12 @@ npm run dev
 ## 📈 Development Plan / План развития сайта
 
 ### Main Screen / Главный экран
-- [ ] Add pixel avatar / Добавить пиксель-аватар
-- [ ] Add short introduction / Добавить краткое описание
+- [x] Add pixel avatar / Добавить пиксель-аватар
+- [x] Add short introduction / Добавить краткое описание
 - [ ] Animate skill counters / Анимировать счётчики навыков
 
 ### Timeline / Таймлайн
-- [ ] Create chronological component / Создать хронологический компонент
+- [x] Create chronological component / Создать хронологический компонент
 - [ ] Add education/work/relocation/events / Добавить образование, работу, переезд, курсы
 - [ ] Add scroll-trigger animations / Добавить анимацию при прокрутке
 
