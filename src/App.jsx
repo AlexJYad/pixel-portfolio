@@ -16,14 +16,18 @@ function App() {
       <>
          <Header />
          <div className="main-container">
-            <section className="section">
+            <section className="section" id="main">
                <ProfileSection />
             </section>
-            <section className="section section-max">
+            <section className="section section-max" id="timeline">
                <TimelineSection items={experienceItems} />
             </section>
             {portfolioChunks.map((chunk, index) => (
-               <section className="section" key={index} id="portfolio">
+               <section
+                  className="section"
+                  key={index}
+                  id={index === 0 ? "portfolio" : undefined}
+               >
                   <PortfolioSection items={chunk} />
                </section>
             ))}

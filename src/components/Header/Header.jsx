@@ -43,16 +43,14 @@ const Header = () => {
                className="header__resume header__btn tooltip btn"
                download
             >
-               <i class="bi bi-file-earmark-arrow-down"></i>
+               <i className="bi bi-file-earmark-arrow-down"></i>
                <span className="tooltip__text">Download CV</span>
             </a>
 
             <button className="header__btn btn" onClick={toggleTheme}>
-               {!darkMode ? (
+               {!darkMode ?
                   <i className="bi bi-lightbulb-off"></i>
-               ) : (
-                  <i className="bi bi-lightbulb-fill"></i>
-               )}
+               :  <i className="bi bi-lightbulb-fill"></i>}
             </button>
             <button className="header__btn btn" onClick={toggleLanguage}>
                {language}
