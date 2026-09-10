@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
 
-const Header = () => {
+const Header = ({ language, toggleLanguage }) => {
    const [darkMode, setDarkMode] = useState(true);
-   const [language, setLanguage] = useState("EN");
 
    const toggleTheme = () => {
       setDarkMode(!darkMode);
       document.body.classList.toggle("light-theme");
-   };
-
-   const toggleLanguage = () => {
-      setLanguage(language === "EN" ? "RU" : "EN");
    };
 
    useEffect(() => {
