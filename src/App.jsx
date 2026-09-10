@@ -5,8 +5,13 @@ import Footer from "./components/Footer/Footer";
 import ProfileSection from "./components/ProfileSection/ProfileSection";
 import TimelineSection from "./components/TimelineSection/TimelineSection";
 import experienceItems from "./data/experience.json";
+import PortfolioSection from "./components/PortfolioSection/PortfolioSection";
+import portfolioItems from "./data/portfolioItems.json";
+import chunkArray from "./utils/chunkArray";
 
 function App() {
+   const portfolioChunks = chunkArray(portfolioItems, 4);
+
    return (
       <>
          <Header />
@@ -17,6 +22,11 @@ function App() {
             <section className="section section-max">
                <TimelineSection items={experienceItems} />
             </section>
+            {portfolioChunks.map((chunk, index) => (
+               <section className="section" key={index} id="portfolio">
+                  <PortfolioSection items={chunk} />
+               </section>
+            ))}
             <Footer />
          </div>
       </>
