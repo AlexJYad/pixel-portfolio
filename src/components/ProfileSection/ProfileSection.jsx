@@ -19,7 +19,7 @@ function ProfileSection() {
    ];
 
    return (
-      <section className="profile-section" id="main">
+      <section className="profile-section">
          <div className="profile-avatar">
             <div className="profile-avatar-frame">
                <img src="/images/my-photo-2.png" alt="My Photo" />

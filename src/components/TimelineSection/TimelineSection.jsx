@@ -36,7 +36,6 @@ function TimelineSection({ items }) {
    return (
       <section
          className="timeline-section"
-         id="timeline"
          ref={sectionRef}
          style={{ "--progress": lineFraction }}
       >
