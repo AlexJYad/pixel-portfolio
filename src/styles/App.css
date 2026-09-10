@@ -15,25 +15,34 @@ header {
 .main-container {
    height: calc(100vh - 6em);
    overflow-y: scroll;
-   scroll-snap-type: y mandatory; /* вертикальный скролл, обязательное прилипание */
+   scroll-snap-type: y mandatory;
    scroll-behavior: smooth;
 }
 
 .section {
    height: calc(100vh - 6em);
-   scroll-snap-align: start; /* прилипаем к началу секции */
+   scroll-snap-align: start;
    display: flex;
    align-items: center;
    justify-content: center;
    margin: 0 10%;
 }
+
+.section-max {
+   height: auto;
+   min-height: calc(100vh - 6em);
+   align-items: flex-start;
+   scroll-snap-align: start;
+   scroll-snap-stop: always;
+}
+
 .section:last-child {
-   height: calc(100vh - 6em - 105px); /* вычитаем футер (60px) */
+   height: calc(100vh - 6em - 105px);
 }
 
 footer {
    height: 105px;
    flex-shrink: 0;
    min-width: 100%;
-   scroll-snap-align: end; /* секция «прилипает» последней */
+   scroll-snap-align: end;
 }

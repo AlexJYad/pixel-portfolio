@@ -1,7 +1,23 @@
-import React from "react";
+import { useRef, useState, useEffect } from "react";
 import "./ProfileSection.css";
 
 function ProfileSection() {
+   const frontendSkills = [
+      { name: "HTML", level: 80 },
+      { name: "CSS", level: 85 },
+      { name: "JS", level: 70 },
+      { name: "React", level: 60 },
+      { name: "TS", level: 10 },
+   ];
+
+   const backendSkills = [
+      { name: "SQL", level: 60 },
+      { name: "OOP", level: 50 },
+      { name: "Node.js", level: 10 },
+      { name: "Git", level: 76 },
+      { name: "Python", level: 50 },
+   ];
+
    return (
       <section className="profile-section" id="main">
          <div className="profile-avatar">
@@ -28,80 +44,16 @@ function ProfileSection() {
 
             <h4>Frontend</h4>
             <div className="pixel-chart">
-               <div className="pixel-chart-column-wrapper">
-                  <div
-                     className="pixel-chart-column-inner"
-                     style={{ height: "80px" }}
-                  ></div>
-                  <span className="chart-text">HTML</span>
-               </div>
-               <div className="pixel-chart-column-wrapper">
-                  <div
-                     className="pixel-chart-column-inner"
-                     style={{ height: "85px" }}
-                  ></div>
-                  <span className="chart-text">CSS</span>
-               </div>
-               <div className="pixel-chart-column-wrapper">
-                  <div
-                     className="pixel-chart-column-inner"
-                     style={{ height: "92px" }}
-                  ></div>
-                  <span className="chart-text">JS</span>
-               </div>
-               <div className="pixel-chart-column-wrapper">
-                  <div
-                     className="pixel-chart-column-inner"
-                     style={{ height: "60px" }}
-                  ></div>
-                  <span className="chart-text">React</span>
-               </div>
-               <div className="pixel-chart-column-wrapper">
-                  <div
-                     className="pixel-chart-column-inner"
-                     style={{ height: "10px" }}
-                  ></div>
-                  <span className="chart-text">TS</span>
-               </div>
+               {frontendSkills.map((skill) => (
+                  <SkillBar key={skill.name} {...skill} />
+               ))}
             </div>
 
             <h4>Backend</h4>
             <div className="pixel-chart">
-               <div className="pixel-chart-column-wrapper">
-                  <div
-                     className="pixel-chart-column-inner"
-                     style={{ height: "60px" }}
-                  ></div>
-                  <span className="chart-text">SQL</span>
-               </div>
-               <div className="pixel-chart-column-wrapper">
-                  <div
-                     className="pixel-chart-column-inner"
-                     style={{ height: "50px" }}
-                  ></div>
-                  <span className="chart-text">OOP</span>
-               </div>
-               <div className="pixel-chart-column-wrapper">
-                  <div
-                     className="pixel-chart-column-inner"
-                     style={{ height: "10px" }}
-                  ></div>
-                  <span className="chart-text">Node.js</span>
-               </div>
-               <div className="pixel-chart-column-wrapper">
-                  <div
-                     className="pixel-chart-column-inner"
-                     style={{ height: "76px" }}
-                  ></div>
-                  <span className="chart-text">Git</span>
-               </div>
-               <div className="pixel-chart-column-wrapper">
-                  <div
-                     className="pixel-chart-column-inner"
-                     style={{ height: "50px" }}
-                  ></div>
-                  <span className="chart-text">Python</span>
-               </div>
+               {backendSkills.map((skill) => (
+                  <SkillBar key={skill.name} {...skill} />
+               ))}
             </div>
 
             <h4>Languages</h4>
@@ -121,3 +73,28 @@ function ProfileSection() {
 }
 
 export default ProfileSection;
+
+function SkillBar({ name, level }) {
+   const ref = useRef(null);
+   const [animate, setAnimate] = useState(false);
+
+   useEffect(() => {
+      const observer = new IntersectionObserver(([entry]) => {
+         setAnimate(entry.isIntersecting);
+      });
+
+      observer.observe(ref.current);
+      return () => observer.disconnect();
+   }, []);
+
+   return (
+      <div className="pixel-chart-column-wrapper">
+         <div
+            ref={ref}
+            className={`pixel-chart-column-inner ${animate ? "animate" : ""}`}
+            style={{ "--target-height": `${level}px` }}
+         ></div>
+         <span className="chart-text">{name}</span>
+      </div>
+   );
+}

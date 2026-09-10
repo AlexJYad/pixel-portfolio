@@ -118,6 +118,7 @@
    background-color: var(--color-accent-1);
    width: calc(100% - 10px);
    box-shadow: 10px 0 0 var(--color-6);
+   height: 0;
 }
 
 .chart-text {
@@ -132,4 +133,17 @@ ul {
    margin: 0;
    font-size: 0.75em;
    list-style-type: square;
+}
+
+@keyframes growBar {
+   from {
+      height: 0;
+   }
+   to {
+      height: var(--target-height);
+   }
+}
+
+.pixel-chart-column-inner.animate {
+   animation: growBar 1s ease-out forwards;
 }
