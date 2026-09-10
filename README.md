@@ -16,11 +16,11 @@ The site includes:
 
 ## 🚀 Technologies & Tools
 
-![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white) ![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?logo=framer&logoColor=white) ![License MIT](https://img.shields.io/badge/License-MIT-green)
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white) ![License MIT](https://img.shields.io/badge/License-MIT-green)
 
-- CSS Modules / Component-Scoped CSS
-- Framer Motion (animations)
-- react-scroll / scroll-trigger (dynamic timeline)
+- Component-scoped CSS (one `.css` file per component)
+- CSS custom properties for dark/light theming (`src/styles/colors.css`)
+- Native `IntersectionObserver` for scroll-triggered animations (timeline reveal, skill bar counters) — no animation library required
 
 ---
 
@@ -29,9 +29,17 @@ The site includes:
 ```
 src/
   components/
-  pages/
+    Header/
+    Footer/
+    ProfileSection/
+    TimelineSection/
+    PortfolioSection/
+    PortfolioCard/
+  data/
+    experience.json
+    portfolioItems.json
   styles/
-  assets/
+  utils/
   App.jsx
   main.jsx
 ```
@@ -75,11 +83,11 @@ npm run dev
 
 ## 🚀 Технологии & Инструменты
 
-![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white) ![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?logo=framer&logoColor=white) ![License MIT](https://img.shields.io/badge/License-MIT-green)
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white) ![License MIT](https://img.shields.io/badge/License-MIT-green)
 
-- CSS Modules / Стили на уровне компонента
-- Framer Motion (анимации)
-- react-scroll / scroll-trigger (динамический таймлайн)
+- Стили на уровне компонента (свой `.css`-файл на каждый компонент)
+- CSS custom properties для тёмной/светлой темы (`src/styles/colors.css`)
+- Нативный `IntersectionObserver` для анимаций при прокрутке (появление таймлайна, анимация скилл-баров) — без сторонних библиотек
 
 ---
 
@@ -88,9 +96,17 @@ npm run dev
 ```
 src/
   components/
-  pages/
+    Header/
+    Footer/
+    ProfileSection/
+    TimelineSection/
+    PortfolioSection/
+    PortfolioCard/
+  data/
+    experience.json
+    portfolioItems.json
   styles/
-  assets/
+  utils/
   App.jsx
   main.jsx
 ```
@@ -127,8 +143,8 @@ npm run dev
 ### Timeline / Таймлайн
 
 - [x] Create chronological component / Создать хронологический компонент
-- [ ] Add education/work/relocation/events / Добавить образование, работу, переезд, курсы
-- [ ] Add scroll-trigger animations / Добавить анимацию при прокрутке
+- [x] Add education/work/relocation/events / Добавить образование, работу, переезд, курсы
+- [x] Add scroll-trigger animations / Добавить анимацию при прокрутке
 
 ### Header & Footer / Хедер и футер
 
@@ -144,6 +160,6 @@ npm run dev
 
 ### Enhancements / Улучшения
 
-- [ ] Add dark/light mode / Добавить светлую/тёмную тему
-- [ ] Multi-language support / Поддержка нескольких языков
+- [x] Add dark/light mode / Добавить светлую/тёмную тему
+- [ ] Multi-language support (currently nav only, page content not yet translated) / Поддержка нескольких языков (пока переведена только навигация, остальной контент — нет)
 - [ ] Optimize for mobile / Оптимизация под мобильные устройства
