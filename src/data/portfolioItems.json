@@ -1,0 +1,30 @@
+[
+   {
+      "id": 1,
+      "image": "/images/Yandex-Four-Knights-Club-Landing.png",
+      "title": "Yandex: Four-Knights-Club-Landing",
+      "description": "Краткое описание проекта",
+      "link": "https://github.com/AlexJYad/Yandex-Four-Knights-Club-Landing"
+   },
+   {
+      "id": 2,
+      "image": "/images/Yandex-Four-Knights-Club-Landing.png",
+      "title": "Project 2",
+      "description": "Краткое описание проекта",
+      "link": "https://github.com/username/project2"
+   },
+   {
+      "id": 3,
+      "image": "/images/Yandex-Four-Knights-Club-Landing.png",
+      "title": "Project 2",
+      "description": "Краткое описание проекта",
+      "link": "https://github.com/username/project2"
+   },
+   {
+      "id": 4,
+      "image": "/images/Yandex-Four-Knights-Club-Landing.png",
+      "title": "Project 2",
+      "description": "Краткое описание проекта",
+      "link": "https://github.com/username/project2"
+   }
+]
