@@ -1,7 +1,12 @@
 import { useRef, useState, useEffect } from "react";
 import "./ProfileSection.css";
 
-function ProfileSection() {
+function ProfileSection({ language }) {
+   const role =
+      language === "EN" ? "Junior Frontend Developer"
+      : language === "RU" ? "Junior Frontend разработчик"
+      : "Desarrollador Frontend Junior";
+
    const frontendSkills = [
       { name: "HTML", level: 80 },
       { name: "CSS", level: 85 },
@@ -28,7 +33,7 @@ function ProfileSection() {
 
          <div className="profile-info">
             <h1>Aleksandr Iakovlev</h1>
-            <h2>Junior Frontend Developer</h2>
+            <h2>{role}</h2>
             <h3>Professional Summary</h3>
             <p>
                Junior Frontend Developer with experience working with data,

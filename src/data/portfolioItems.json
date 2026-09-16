@@ -2,29 +2,43 @@
    {
       "id": 1,
       "image": "/images/Yandex-Four-Knights-Club-Landing.png",
-      "title": "Yandex: Four-Knights-Club-Landing",
-      "description": "Краткое описание проекта",
+      "title": "♞ The Four Knights Club",
+      "description": "Yandex.Practicum test assignment — pixel-perfect responsive layout built from a Figma design. A stylized promo landing page inspired by chapter XXXIV of Ilf and Petrov's novel The Twelve Chairs — the Vasyuki chess tournament, the 'Fruitful Opening Idea' lecture, and a simultaneous exhibition match on 160 boards.",
       "link": "https://github.com/AlexJYad/Yandex-Four-Knights-Club-Landing"
    },
    {
       "id": 2,
-      "image": "/images/Yandex-Four-Knights-Club-Landing.png",
-      "title": "Project 2",
-      "description": "Краткое описание проекта",
+      "image": "/images/dnd.png",
+      "title": "Alterras",
+      "description": "Next.js 16 + Supabase companion app for a homebrew tabletop RPG: character sheets, world lore, interactive spell tree and GM tools. Full-stack rewrite of DnD-spellbook",
       "link": "https://github.com/username/project2"
    },
    {
       "id": 3,
-      "image": "/images/Yandex-Four-Knights-Club-Landing.png",
-      "title": "Project 2",
-      "description": "Краткое описание проекта",
-      "link": "https://github.com/username/project2"
+      "image": "/images/Kamakura-food.png",
+      "title": "Kamakura Food",
+      "description": "Dynamic menu & shopping cart for a Japanese restaurant landing page. Frontend training exercise — vanilla JS DOM manipulation, no frameworks.",
+      "link": "https://github.com/AlexJYad/js-kamakura-food2"
    },
    {
       "id": 4,
-      "image": "/images/Yandex-Four-Knights-Club-Landing.png",
-      "title": "Project 2",
-      "description": "Краткое описание проекта",
-      "link": "https://github.com/username/project2"
+      "image": "/images/F5FLIX.png",
+      "title": "F5FLIX",
+      "description": "Netflix-style landing page & catalog — static HTML/CSS training exercise built during the Factoria F5 frontend bootcamp.",
+      "link": "https://github.com/AlexJYad/F5FLIX"
+   },
+   {
+      "id": 5,
+      "image": "/images/java.png",
+      "title": "Battle Simulator",
+      "description": "An educational Java project that simulates battles between characters and manages their statistics using data structures such as HashMap, ArrayList, and Set. It includes file input/output, a simple text-based interface, and an interactive menu.",
+      "link": "https://github.com/AlexJYad/BattleSimulator"
+   },
+   {
+      "id": 6,
+      "image": "/images/Escape-Room-Web.png",
+      "title": "Escape Room Web.png",
+      "description": "Interactive GTA-themed browser escape room built in vanilla JS/HTML/CSS as part of a 3-person team; implemented core game logic, DOM-based state navigation, and win/lose flow.",
+      "link": "https://github.com/AlexJYad/Tu-Escape-Room-Web"
    }
 ]

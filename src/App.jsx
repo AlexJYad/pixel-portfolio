@@ -30,7 +30,7 @@ function App() {
          <Header language={language} toggleLanguage={cycleLanguage} />
          <div className="main-container">
             <section className="section" id="main">
-               <ProfileSection />
+               <ProfileSection language={language} />
             </section>
             <section className="section section-max" id="timeline">
                <TimelineSection items={experienceItems} />

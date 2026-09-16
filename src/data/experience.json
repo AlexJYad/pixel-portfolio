@@ -1,27 +1,33 @@
 [
    {
       "date": "2018",
-      "title": "Degree in Computer Science",
-      "company": "Moscow Aviation Institute",
-      "bullets": []
+      "title": "Bachelor's Degree in Computer Science",
+      "company": "Moscow Aviation Institute (MAI)",
+      "bullets": [
+         "Studied fundamentals of programming, data structures, and algorithms.",
+         "Covered discrete mathematics, object-oriented programming (OOP), and information systems design principles.",
+         "Studied networking technologies and computer systems architecture.",
+         "Gained a solid foundation in mathematics and engineering disciplines applicable to software development."
+      ]
    },
    {
       "date": "2020 - 2022",
       "title": "SYSTEMS ADMINISTRATOR",
       "company": "Syrius",
       "bullets": [
-         "Provided on-site and remote technical support for corporate users.",
+         "Provided on-site and remote technical support for corporate users, ensuring fast incident resolution.",
          "Managed user accounts and installed specialized software, including CryptoPro and banking applications.",
-         "Configured and maintained network infrastructure — routers, cabling, and printers.",
-         "Ensured stable connectivity and reliable operation of corporate systems."
+         "Configured and maintained network infrastructure — routers, cabling, printers, and peripheral equipment.",
+         "Ensured stable connectivity and reliable operation of corporate systems, minimizing downtime."
       ]
    },
    {
-      "date": "2022-2024",
+      "date": "2022 - 2024",
       "title": "TECHNICAL SUPPORT SPECIALIST",
       "company": "Monastyrev and CO",
       "bullets": [
-         "Delivered internal technical support, both general and specialized.",
+         "Provided technical support for a network of 20 pharmacies spanning the territory from Vladivostok to Moscow.",
+         "Delivered internal technical support, both general and specialized, to company staff.",
          "Diagnosed, repaired, and maintained hardware and software components.",
          "Ensured continuous and stable operation of company equipment.",
          "Advised users and teams on IT-related matters.",
@@ -31,23 +37,29 @@
    {
       "date": "2024",
       "title": "Move to Spain",
-      "company": "And now have promishon to work",
-      "bullets": []
+      "company": "Legalization",
+      "bullets": [
+         "Applied for asylum.",
+         "Obtained NIE (foreigner identification number).",
+         "Obtained a work permit."
+      ]
    },
    {
       "date": "2025",
-      "title": "Curso: Java Programming and Analysis",
+      "title": "Course: Java Programming and Analysis",
       "company": "INADECO",
       "bullets": [
-         "140 hours"
+         "140-hour course covering OOP fundamentals.",
+         "Built BattleSimulator — a turn-based combat simulator in Java (github.com/AlexJYad/BattleSimulator)."
       ]
    },
    {
       "date": "2026",
-      "title": "Curso: Web Page Publishing and Development",
+      "title": "Course: Web Page Publishing and Development",
       "company": "Factoría F5",
       "bullets": [
-         "Level 2 Professional Certificate in Web Page Publishing and Development"
+         "Level 2 Professional Certificate (Certificado de Profesionalidad) in Web Page Publishing and Development.",
+         "Studied HTML/CSS/JS, Angular, and Tailwind CSS."
       ]
    }
 ]
