@@ -1,17 +1,34 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
 
-const Header = () => {
+const Header = ({ language, toggleLanguage }) => {
    const [darkMode, setDarkMode] = useState(true);
-   const [language, setLanguage] = useState("EN");
+
+   const navLabels = {
+      EN: {
+         home: "Home",
+         timeline: "Timeline",
+         portfolio: "Portfolio",
+         contact: "Contact",
+      },
+      RU: {
+         home: "Главная",
+         timeline: "Хронология",
+         portfolio: "Портфолио",
+         contact: "Контакты",
+      },
+      ES: {
+         home: "Inicio",
+         timeline: "Cronología",
+         portfolio: "Portafolio",
+         contact: "Contacto",
+      },
+   };
+   const labels = navLabels[language];
 
    const toggleTheme = () => {
       setDarkMode(!darkMode);
       document.body.classList.toggle("light-theme");
-   };
-
-   const toggleLanguage = () => {
-      setLanguage(language === "EN" ? "RU" : "EN");
    };
 
    useEffect(() => {
@@ -25,18 +42,17 @@ const Header = () => {
          </div>
          <nav className="header__nav">
             <a href="#main" className="btn">
-               {language === "EN" ? "Home" : "Главная"}
+               {labels.home}
             </a>
             <a href="#timeline" className="btn">
-               {language === "EN" ? "Timeline" : "Хронология"}
+               {labels.timeline}
             </a>
             <a href="#portfolio" className="btn">
-               {language === "EN" ? "Portfolio" : "Портфолио"}
+               {labels.portfolio}
             </a>
             <a href="#contact" className="btn">
-               {language === "EN" ? "Contact" : "Контакты"}
+               {labels.contact}
             </a>
-
             {/* Файл заглужка - надо потом изменить */}
             <a
                href="/resume.pdf"
