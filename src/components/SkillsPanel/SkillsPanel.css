@@ -1,0 +1,29 @@
+.lang-list {
+   list-style: none;
+   padding: 0;
+   font-size: 1em;
+}
+
+.lang-row {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 8px;
+   margin-bottom: 6px;
+   font-family: var(--font-mono);
+   font-size: 1.15rem;
+}
+
+.lang-stars {
+   display: flex;
+   gap: 2px;
+}
+
+.star {
+   width: 14px;
+   height: 14px;
+   fill: rgba(128, 128, 128, 0.3);
+}
+.star--on {
+   fill: var(--color-accent-1);
+}

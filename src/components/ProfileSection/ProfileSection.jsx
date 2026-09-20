@@ -1,5 +1,5 @@
-import { useRef, useState, useEffect } from "react";
 import "./ProfileSection.css";
+import SkillsPanel from "../SkillsPanel/SkillsPanel";
 
 const translations = {
    EN: {
@@ -37,22 +37,6 @@ const translations = {
 function ProfileSection({ language }) {
    const t = translations[language] ?? translations.EN;
 
-   const frontendSkills = [
-      { name: "HTML", level: 80 },
-      { name: "CSS", level: 85 },
-      { name: "JS", level: 70 },
-      { name: "React", level: 60 },
-      { name: "TS", level: 10 },
-   ];
-
-   const backendSkills = [
-      { name: "SQL", level: 60 },
-      { name: "OOP", level: 50 },
-      { name: "Node.js", level: 10 },
-      { name: "Git", level: 75 },
-      { name: "Python", level: 50 },
-   ];
-
    return (
       <section className="profile-section">
          <div className="profile-avatar">
@@ -68,30 +52,7 @@ function ProfileSection({ language }) {
             <p>{t.bio}</p>
          </div>
 
-         <div className="profile-skills">
-            <h3>{t.skills}</h3>
-
-            <h4>Frontend</h4>
-            <div className="pixel-chart">
-               {frontendSkills.map((skill) => (
-                  <SkillBar key={skill.name} {...skill} />
-               ))}
-            </div>
-
-            <h4>Backend</h4>
-            <div className="pixel-chart">
-               {backendSkills.map((skill) => (
-                  <SkillBar key={skill.name} {...skill} />
-               ))}
-            </div>
-
-            <h4>{t.languages}</h4>
-            <ul>
-               <li>{t.russian}</li>
-               <li>{t.english}</li>
-               <li>{t.spanish}</li>
-            </ul>
-         </div>
+         <SkillsPanel language={language} />
 
          <div className="profile-start">
             <div className="profile-start-point"></div>
@@ -102,30 +63,3 @@ function ProfileSection({ language }) {
 }
 
 export default ProfileSection;
-
-function SkillBar({ name, level }) {
-   const ref = useRef(null);
-   const [animate, setAnimate] = useState(false);
-
-   useEffect(() => {
-      if (!ref.current) return;
-
-      const observer = new IntersectionObserver(([entry]) => {
-         setAnimate(entry.isIntersecting);
-      });
-
-      observer.observe(ref.current);
-      return () => observer.disconnect();
-   }, []);
-
-   return (
-      <div className="pixel-chart-column-wrapper">
-         <div
-            ref={ref}
-            className={`pixel-chart-column-inner ${animate ? "animate" : ""}`}
-            style={{ "--target-height": `${level}px` }}
-         ></div>
-         <span className="chart-text">{name}</span>
-      </div>
-   );
-}
