@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PixelBackpack from "./PixelBackpack";
 import "./Header.css";
 
 const Header = ({ language, toggleLanguage }) => {
@@ -37,9 +38,12 @@ const Header = ({ language, toggleLanguage }) => {
 
    return (
       <header className="header">
-         <div className="header__logo">
-            <h1>PixelPortfolio</h1>
-         </div>
+         <a href="#main">
+            <div className="header__logo">
+               <PixelBackpack />
+               <h1>PixelPortfolio</h1>
+            </div>
+         </a>
          <nav className="header__nav">
             <a href="#main" className="btn">
                {labels.home}
