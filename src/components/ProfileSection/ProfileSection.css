@@ -2,7 +2,7 @@
    display: grid;
    grid-template-columns: 1fr 2fr 1fr;
    grid-template-rows: auto 1fr;
-   column-gap: 100px;
+   column-gap: 50px;
    align-content: start;
    height: 100%;
    padding-top: 3em;

@@ -1,5 +1,5 @@
 import SkillBar from "./SkillBar";
-import PixelStar from "./PixelStar";
+import LanguageRow from "./LanguageRow";
 import "./SkillsPanel.css";
 
 const translations = {
@@ -52,33 +52,26 @@ function SkillsPanel({ language }) {
    const t = translations[language] ?? translations.EN;
    return (
       <div className="profile-skills">
-         <h3>{t.skills}</h3>
+         <h3 className="skills-tab">{t.skills}</h3>
 
          <h4>Frontend</h4>
-         <div className="pixel-chart">
+         <ul className="skills-list">
             {frontendSkills.map((skill) => (
                <SkillBar key={skill.name} {...skill} />
             ))}
-         </div>
+         </ul>
 
          <h4>Backend</h4>
-         <div className="pixel-chart">
+         <ul className="skills-list">
             {backendSkills.map((skill) => (
                <SkillBar key={skill.name} {...skill} />
             ))}
-         </div>
+         </ul>
 
          <h4>{t.languages}</h4>
          <ul className="lang-list">
             {languages.map(({ key, stars }) => (
-               <li className="lang-row" key={key}>
-                  <span>{t[key]}</span>
-                  <span className="lang-stars" aria-hidden="true">
-                     {Array.from({ length: 5 }, (_, i) => (
-                        <PixelStar key={i} on={i < stars} />
-                     ))}
-                  </span>
-               </li>
+               <LanguageRow key={key} label={t[key]} stars={stars} />
             ))}
          </ul>
       </div>

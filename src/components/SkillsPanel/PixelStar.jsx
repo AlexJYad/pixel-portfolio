@@ -8,10 +8,11 @@ const STAR = [
    ".#...#.",
 ];
 
-function PixelStar({ on }) {
+function PixelStar({ on, index }) {
    return (
       <svg
          className={`star ${on ? "star--on" : ""}`}
+         style={{ "--i": index }}
          viewBox="0 0 7 7"
          shapeRendering="crispEdges"
          aria-hidden="true"
