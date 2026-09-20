@@ -33,7 +33,7 @@ function App() {
                <ProfileSection language={language} />
             </section>
             <section className="section section-max" id="timeline">
-               <TimelineSection items={experienceItems} />
+               <TimelineSection items={experienceItems[language]} />
             </section>
             {portfolioChunks.map((chunk, index) => (
                <section
@@ -41,7 +41,7 @@ function App() {
                   key={index}
                   id={index === 0 ? "portfolio" : undefined}
                >
-                  <PortfolioSection items={chunk} />
+                  <PortfolioSection items={chunk} language={language} />
                </section>
             ))}
             <Footer />

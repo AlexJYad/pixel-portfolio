@@ -1,65 +1,197 @@
-[
-   {
-      "date": "2018",
-      "title": "Bachelor's Degree in Computer Science",
-      "company": "Moscow Aviation Institute (MAI)",
-      "bullets": [
-         "Studied fundamentals of programming, data structures, and algorithms.",
-         "Covered discrete mathematics, object-oriented programming (OOP), and information systems design principles.",
-         "Studied networking technologies and computer systems architecture.",
-         "Gained a solid foundation in mathematics and engineering disciplines applicable to software development."
-      ]
-   },
-   {
-      "date": "2020 - 2022",
-      "title": "SYSTEMS ADMINISTRATOR",
-      "company": "Syrius",
-      "bullets": [
-         "Provided on-site and remote technical support for corporate users, ensuring fast incident resolution.",
-         "Managed user accounts and installed specialized software, including CryptoPro and banking applications.",
-         "Configured and maintained network infrastructure — routers, cabling, printers, and peripheral equipment.",
-         "Ensured stable connectivity and reliable operation of corporate systems, minimizing downtime."
-      ]
-   },
-   {
-      "date": "2022 - 2024",
-      "title": "TECHNICAL SUPPORT SPECIALIST",
-      "company": "Monastyrev and CO",
-      "bullets": [
-         "Provided technical support for a network of 20 pharmacies spanning the territory from Vladivostok to Moscow.",
-         "Delivered internal technical support, both general and specialized, to company staff.",
-         "Diagnosed, repaired, and maintained hardware and software components.",
-         "Ensured continuous and stable operation of company equipment.",
-         "Advised users and teams on IT-related matters.",
-         "Provided training to help staff make better use of available technology."
-      ]
-   },
-   {
-      "date": "2024",
-      "title": "Move to Spain",
-      "company": "Legalization",
-      "bullets": [
-         "Applied for asylum.",
-         "Obtained NIE (foreigner identification number).",
-         "Obtained a work permit."
-      ]
-   },
-   {
-      "date": "2025",
-      "title": "Course: Java Programming and Analysis",
-      "company": "INADECO",
-      "bullets": [
-         "140-hour course covering OOP fundamentals.",
-         "Built BattleSimulator — a turn-based combat simulator in Java (github.com/AlexJYad/BattleSimulator)."
-      ]
-   },
-   {
-      "date": "2026",
-      "title": "Course: Web Page Publishing and Development",
-      "company": "Factoría F5",
-      "bullets": [
-         "Level 2 Professional Certificate (Certificado de Profesionalidad) in Web Page Publishing and Development.",
-         "Studied HTML/CSS/JS, Angular, and Tailwind CSS."
-      ]
-   }
-]
+{
+   "EN": [
+      {
+         "date": "2018",
+         "title": "Bachelor's Degree in Computer Science",
+         "company": "Moscow Aviation Institute (MAI)",
+         "bullets": [
+            "Studied fundamentals of programming, data structures, and algorithms.",
+            "Covered discrete mathematics, object-oriented programming (OOP), and information systems design principles.",
+            "Studied networking technologies and computer systems architecture.",
+            "Gained a solid foundation in mathematics and engineering disciplines applicable to software development."
+         ]
+      },
+      {
+         "date": "2020 - 2022",
+         "title": "SYSTEMS ADMINISTRATOR",
+         "company": "Syrius",
+         "bullets": [
+            "Provided on-site and remote technical support for corporate users, ensuring fast incident resolution.",
+            "Managed user accounts and installed specialized software, including CryptoPro and banking applications.",
+            "Configured and maintained network infrastructure — routers, cabling, printers, and peripheral equipment.",
+            "Ensured stable connectivity and reliable operation of corporate systems, minimizing downtime."
+         ]
+      },
+      {
+         "date": "2022 - 2024",
+         "title": "TECHNICAL SUPPORT SPECIALIST",
+         "company": "Monastyrev and CO",
+         "bullets": [
+            "Provided technical support for a network of 20 pharmacies spanning the territory from Vladivostok to Moscow.",
+            "Delivered internal technical support, both general and specialized, to company staff.",
+            "Diagnosed, repaired, and maintained hardware and software components.",
+            "Ensured continuous and stable operation of company equipment.",
+            "Advised users and teams on IT-related matters.",
+            "Provided training to help staff make better use of available technology."
+         ]
+      },
+      {
+         "date": "2024",
+         "title": "Move to Spain",
+         "company": "Legalization",
+         "bullets": [
+            "Applied for asylum.",
+            "Obtained NIE (foreigner identification number).",
+            "Obtained a work permit."
+         ]
+      },
+      {
+         "date": "2025",
+         "title": "Course: Java Programming and Analysis",
+         "company": "INADECO",
+         "bullets": [
+            "140-hour course covering OOP fundamentals.",
+            "Built BattleSimulator — a turn-based combat simulator in Java (github.com/AlexJYad/BattleSimulator)."
+         ]
+      },
+      {
+         "date": "2026",
+         "title": "Course: Web Page Publishing and Development",
+         "company": "Factoría F5",
+         "bullets": [
+            "Level 2 Professional Certificate (Certificado de Profesionalidad) in Web Page Publishing and Development.",
+            "Studied HTML/CSS/JS, Angular, and Tailwind CSS."
+         ]
+      }
+   ],
+   "RU": [
+      {
+         "date": "2018",
+         "title": "Диплом бакалавра по специальности «Информатика»",
+         "company": "Московский авиационный институт (МАИ)",
+         "bullets": [
+            "Изучал основы программирования, структуры данных и алгоритмы.",
+            "Освоил дискретную математику, объектно-ориентированное программирование (ООП) и принципы построения информационных систем.",
+            "Изучал сетевые технологии и архитектуру вычислительных систем.",
+            "Получил базовую подготовку по математике и инженерным дисциплинам, применимую в разработке ПО."
+         ]
+      },
+      {
+         "date": "2020 - 2022",
+         "title": "СИСТЕМНЫЙ АДМИНИСТРАТОР",
+         "company": "Syrius",
+         "bullets": [
+            "Оказывал очную и удалённую техническую поддержку корпоративным пользователям, обеспечивая быстрое решение инцидентов.",
+            "Управлял учётными записями пользователей и устанавливал специализированное ПО, включая CryptoPro и банковские приложения.",
+            "Настраивал и обслуживал сетевую инфраструктуру: маршрутизаторы, кабельные системы, принтеры и периферийное оборудование.",
+            "Обеспечивал бесперебойную связь и стабильную работу корпоративных систем, минимизируя простои."
+         ]
+      },
+      {
+         "date": "2022 - 2024",
+         "title": "СПЕЦИАЛИСТ ТЕХНИЧЕСКОЙ ПОДДЕРЖКИ",
+         "company": "Monastyrev and CO",
+         "bullets": [
+            "Обеспечивал техническую поддержку сети из 20 аптек на территории от Владивостока до Москвы.",
+            "Оказывал внутреннюю техническую поддержку сотрудникам компании — как общего профиля, так и по специализированным вопросам.",
+            "Диагностировал, ремонтировал и обслуживал аппаратные и программные компоненты рабочих станций и оборудования.",
+            "Обеспечивал непрерывную и стабильную работу оборудования компании.",
+            "Консультировал пользователей и команды по вопросам, связанным с ИТ.",
+            "Проводил обучение сотрудников для более эффективного использования доступных технологий и инструментов."
+         ]
+      },
+      {
+         "date": "2024",
+         "title": "Переезд в Испанию",
+         "company": "Легализация",
+         "bullets": [
+            "Подал заявление на предоставление убежища.",
+            "Получил NIE (идентификационный номер иностранца).",
+            "Получил разрешение на работу."
+         ]
+      },
+      {
+         "date": "2025",
+         "title": "Курс: «Программирование и анализ на Java»",
+         "company": "INADECO",
+         "bullets": [
+            "Продолжительность курса — 140 часов, изучение основ ООП.",
+            "Реализовал учебный проект BattleSimulator — симулятор пошагового боя на Java (github.com/AlexJYad/BattleSimulator)."
+         ]
+      },
+      {
+         "date": "2026",
+         "title": "Курс: «Публикация и разработка веб-страниц»",
+         "company": "Factoría F5",
+         "bullets": [
+            "Профессиональный сертификат уровня 2 (Certificado de Profesionalidad) по публикации и разработке веб-страниц.",
+            "Изучал HTML/CSS/JS, Angular и Tailwind CSS."
+         ]
+      }
+   ],
+   "ES": [
+      {
+         "date": "2018",
+         "title": "Grado en Informática",
+         "company": "Instituto de Aviación de Moscú (MAI)",
+         "bullets": [
+            "Estudié fundamentos de programación, estructuras de datos y algoritmos.",
+            "Cursé matemática discreta, programación orientada a objetos (POO) y principios de diseño de sistemas de información.",
+            "Estudié tecnologías de redes y arquitectura de sistemas informáticos.",
+            "Adquirí una base sólida en matemáticas e ingeniería aplicable al desarrollo de software."
+         ]
+      },
+      {
+         "date": "2020 - 2022",
+         "title": "ADMINISTRADOR DE SISTEMAS",
+         "company": "Syrius",
+         "bullets": [
+            "Proporcioné soporte técnico presencial y remoto a usuarios corporativos, resolviendo incidencias con rapidez.",
+            "Gestioné cuentas de usuario e instalé software especializado, incluyendo CryptoPro y aplicaciones bancarias.",
+            "Configuré y mantuve infraestructura de red — routers, cableado, impresoras y equipos periféricos.",
+            "Aseguré la conectividad estable y el funcionamiento fiable de los sistemas corporativos, minimizando el tiempo de inactividad."
+         ]
+      },
+      {
+         "date": "2022 - 2024",
+         "title": "ESPECIALISTA EN SOPORTE TÉCNICO",
+         "company": "Monastyrev and CO",
+         "bullets": [
+            "Brindé soporte técnico a una red de 20 farmacias distribuidas en un territorio desde Vladivostok hasta Moscú.",
+            "Proporcioné soporte técnico interno, tanto general como especializado, al personal de la empresa.",
+            "Diagnostiqué, reparé y mantuve componentes de hardware y software.",
+            "Aseguré el funcionamiento continuo y estable del equipamiento de la empresa.",
+            "Asesoré a usuarios y equipos en cuestiones relacionadas con TI.",
+            "Impartí formación para ayudar al personal a aprovechar mejor la tecnología disponible."
+         ]
+      },
+      {
+         "date": "2024",
+         "title": "Traslado a España",
+         "company": "Regularización",
+         "bullets": [
+            "Solicité protección internacional (asilo).",
+            "Obtuve el NIE (Número de Identificación de Extranjero).",
+            "Obtuve el permiso de trabajo."
+         ]
+      },
+      {
+         "date": "2025",
+         "title": "Curso: Programación y Análisis en Java",
+         "company": "INADECO",
+         "bullets": [
+            "Curso de 140 horas centrado en los fundamentos de la POO.",
+            "Desarrollé BattleSimulator — un simulador de combate por turnos en Java (github.com/AlexJYad/BattleSimulator)."
+         ]
+      },
+      {
+         "date": "2026",
+         "title": "Curso: Publicación y Desarrollo de Páginas Web",
+         "company": "Factoría F5",
+         "bullets": [
+            "Certificado de Profesionalidad de Nivel 2 en Publicación y Desarrollo de Páginas Web.",
+            "Estudié HTML/CSS/JS, Angular y Tailwind CSS."
+         ]
+      }
+   ]
+}

@@ -1,11 +1,41 @@
 import { useRef, useState, useEffect } from "react";
 import "./ProfileSection.css";
 
+const translations = {
+   EN: {
+      role: "Junior Frontend Developer",
+      summary: "Professional Summary",
+      skills: "Technical Skills",
+      languages: "Languages",
+      russian: "Russian (native)",
+      english: "English (B2 / C1)",
+      spanish: "Spanish (A2 / B1)",
+      bio: "Junior Frontend Developer with a background in IT support and systems administration, now focused on building structured, user-friendly interfaces with JavaScript, Angular, and React. I combine systematic, detail-oriented thinking with hands-on experience across interactive projects — from API integrations to component architecture — to deliver solutions that are both reliable and easy to use.",
+   },
+   RU: {
+      role: "Junior Frontend разработчик",
+      summary: "Профессиональное резюме",
+      skills: "Технические навыки",
+      languages: "Языки",
+      russian: "Русский (родной)",
+      english: "Английский (B2 / C1)",
+      spanish: "Испанский (A2 / B1)",
+      bio: "Junior Frontend-разработчик с опытом в IT-поддержке и системном администрировании, сейчас сосредоточен на создании структурированных и удобных интерфейсов с использованием JavaScript, Angular и React. Сочетаю системное, внимательное к деталям мышление с практическим опытом в интерактивных проектах — от интеграции API до архитектуры компонентов — чтобы предлагать решения, которые одновременно надёжны и удобны в использовании.",
+   },
+   ES: {
+      role: "Desarrollador Frontend Junior",
+      summary: "Resumen Profesional",
+      skills: "Habilidades Técnicas",
+      languages: "Idiomas",
+      russian: "Ruso (nativo)",
+      english: "Inglés (B2 / C1)",
+      spanish: "Español (A2 / B1)",
+      bio: "Desarrollador Frontend Junior con experiencia en soporte de TI y administración de sistemas, actualmente enfocado en crear interfaces estructuradas y fáciles de usar con JavaScript, Angular y React. Combino un pensamiento sistemático y orientado al detalle con experiencia práctica en proyectos interactivos —desde integraciones de API hasta arquitectura de componentes— para ofrecer soluciones fiables y fáciles de usar.",
+   },
+};
+
 function ProfileSection({ language }) {
-   const role =
-      language === "EN" ? "Junior Frontend Developer"
-      : language === "RU" ? "Junior Frontend разработчик"
-      : "Desarrollador Frontend Junior";
+   const t = translations[language] ?? translations.EN;
 
    const frontendSkills = [
       { name: "HTML", level: 80 },
@@ -19,7 +49,7 @@ function ProfileSection({ language }) {
       { name: "SQL", level: 60 },
       { name: "OOP", level: 50 },
       { name: "Node.js", level: 10 },
-      { name: "Git", level: 76 },
+      { name: "Git", level: 75 },
       { name: "Python", level: 50 },
    ];
 
@@ -33,19 +63,13 @@ function ProfileSection({ language }) {
 
          <div className="profile-info">
             <h1>Aleksandr Iakovlev</h1>
-            <h2>{role}</h2>
-            <h3>Professional Summary</h3>
-            <p>
-               Junior Frontend Developer with experience working with data,
-               documentation, and user processes. Specialising in JavaScript and
-               React, I create structured, reliable, and user-friendly
-               interfaces. Systematic thinking and experience in interactive
-               projects enable me to deliver solutions that enhance both
-               efficiency and user experience.
-            </p>
+            <h2>{t.role}</h2>
+            <h3>{t.summary}</h3>
+            <p>{t.bio}</p>
          </div>
+
          <div className="profile-skills">
-            <h3>Technical Skills</h3>
+            <h3>{t.skills}</h3>
 
             <h4>Frontend</h4>
             <div className="pixel-chart">
@@ -61,11 +85,11 @@ function ProfileSection({ language }) {
                ))}
             </div>
 
-            <h4>Languages</h4>
+            <h4>{t.languages}</h4>
             <ul>
-               <li>Rushan (nativ)</li>
-               <li>English (B2 / C1)</li>
-               <li>Spanish (A2 / B1)</li>
+               <li>{t.russian}</li>
+               <li>{t.english}</li>
+               <li>{t.spanish}</li>
             </ul>
          </div>
 
@@ -84,6 +108,8 @@ function SkillBar({ name, level }) {
    const [animate, setAnimate] = useState(false);
 
    useEffect(() => {
+      if (!ref.current) return;
+
       const observer = new IntersectionObserver(([entry]) => {
          setAnimate(entry.isIntersecting);
       });
