@@ -13,7 +13,7 @@
    {
       "id": 2,
       "image": "/images/dnd.png",
-      "link": "https://github.com/username/project2",
+      "link": "https://github.com/AlexJYad/next-dnd",
       "title": "Alterras",
       "description": {
          "EN": "Next.js 16 + Supabase companion app for a homebrew tabletop RPG: character sheets, world lore, interactive spell tree and GM tools. Full-stack rewrite of DnD-spellbook.",
