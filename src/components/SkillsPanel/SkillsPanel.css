@@ -1,28 +1,27 @@
 /* ===== THEME VARIABLES ===== */
 
-/* dark theme is the default */
 .profile-skills {
-   --seg-empty: #41444b;
+   --seg-empty: var(--color-bg-accent-1);
    --seg-on: var(--color-accent-1);
 
-   --panel-bg: #26282d;
+   --panel-bg: var(--color-bg-accent-2);
    --panel-border: var(--color-accent-1);
    --panel-drop: rgba(0, 0, 0, 0.35);
    --tab-bg: var(--color-accent-1);
-   --tab-text: #212225;
+   --tab-text: var(--color-text-gray);
 }
 
 /* ===== LIGHT-THEME ===== */
 
 .light-theme .profile-skills {
-   --seg-empty: #e3cba3;
-   --seg-on: #e6960f;
+   --seg-empty: var(--color-accent-light-2);
+   --seg-on: var(--color-accent-light-4);
 
-   --panel-bg: var(--color-bg-light-accent-1);
+   --panel-bg: var(--color-bg-light-accent-3);
    --panel-border: var(--color-br-shadow);
    --panel-drop: rgba(60, 33, 22, 0.25);
-   --tab-bg: var(--color-accent-light-1);
-   --tab-text: var(--color-bg-light-accent-1);
+   --tab-bg: var(--color-accent-light-4);
+   --tab-text: var(--color-bg-light-accent-3);
 }
 
 /* ===== PANEL FRAME ===== */
@@ -32,12 +31,8 @@
    text-align: left;
    padding: 28px 18px 14px;
    background: var(--panel-bg);
-   box-shadow:
-      0 -4px 0 0 var(--panel-border),
-      0 4px 0 0 var(--panel-border),
-      -4px 0 0 0 var(--panel-border),
-      4px 0 0 0 var(--panel-border),
-      8px 8px 0 0 var(--panel-drop);
+   box-shadow: var(--shadow-2);
+   text-transform: uppercase;
 }
 
 /* ===== PANEL TAB ===== */
@@ -52,11 +47,7 @@
    line-height: 1.2;
    background: var(--tab-bg);
    color: var(--tab-text);
-   box-shadow:
-      0 -3px 0 0 #000,
-      0 3px 0 0 #000,
-      -3px 0 0 0 #000,
-      3px 0 0 0 #000;
+   box-shadow: var(--shadow);
 }
 
 /* ===== LISTS ===== */
@@ -150,7 +141,7 @@
 }
 
 .star--on {
-   fill: var(--seg-empty); /* stays grey until the row is visible */
+   fill: var(--seg-empty);
 }
 
 /* ===== PIXEL STAR ANIMATION ===== */
@@ -171,7 +162,6 @@
    animation-delay: calc(var(--row-delay, 0s) + var(--i) * 90ms);
 }
 
-/* the hop takes ~6% of the cycle, the rest of the time stars stand still */
 @keyframes star-hop {
    0% {
       transform: translateY(0);

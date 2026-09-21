@@ -35,7 +35,7 @@
 
 :root {
    --font-body: "Retron", "Inter", "Roboto", sans-serif;
-   --font-mono: "VT323", "Handjet", monospace;
+   --font-mono: "Handjet", monospace;
    --font-pixel: "fs", "Quinque", "Press Start 2P", "Bytesized", cursive;
    margin: 0;
    padding: 0;
@@ -63,11 +63,11 @@ h1 {
    font-size: 2em;
    line-height: 1.1;
    margin: 0;
-   font-family: var(--font-body);
+   font-family: var(--font-pixel);
 }
 
 h2 {
-   font-size: 2em;
+   font-size: 3em;
    margin-top: 0px;
    margin-bottom: 30px;
    font-family: var(--font-pixel);
@@ -83,8 +83,11 @@ h3 {
 
 h4 {
    font-family: var(--font-pixel);
+   font-weight: 700;
    font-size: 1.6em;
    margin: 0;
+   text-transform: uppercase;
+   color: var(--color-accent-3);
 }
 
 span {

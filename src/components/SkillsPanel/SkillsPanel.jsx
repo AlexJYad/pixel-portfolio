@@ -22,7 +22,7 @@ const translations = {
       languages: "Idiomas",
       russian: "Ruso (nativo)",
       english: "Inglés (B2 / C1)",
-      spanish: "Español (A2 / B1)",
+      spanish: "Сastellano (A2 / B1)",
    },
 };
 

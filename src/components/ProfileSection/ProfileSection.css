@@ -1,3 +1,22 @@
+/* ===== THEME VARIABLES ===== */
+
+.profile-section {
+   --panel-bg: var(--color-bg-accent-2);
+   --name-bg: var(--color-bg-light-accent-1);
+   --tab-bg: var(--color-accent-1);
+   --tab-text: var(--color-text-gray);
+}
+
+/* ===== LIGHT-THEME ===== */
+.light-theme .profile-section {
+   --panel-bg: var(--color-bg-light-accent-3);
+   /* --name-bg: var(--color-bg-light-accent-1); */
+   --tab-bg: var(--color-accent-light-4);
+   --tab-text: var(--color-bg-light-accent-3);
+}
+
+/* ===== LAYOUT ===== */
+
 .profile-section {
    display: grid;
    grid-template-columns: 1fr 1.6fr 1fr;
@@ -9,17 +28,19 @@
    box-sizing: border-box;
 }
 
+/* ===== AVATAR ===== */
+
 .profile-avatar {
    grid-column: 1 / 2;
    grid-row: 1 / 2;
    justify-self: right;
-   margin-top: 35px;
+   margin-top: 25px;
 }
 
 .profile-avatar-frame {
    width: 256px;
    height: 384px;
-   display: inline-block;
+   display: block;
    position: relative;
    box-shadow:
       -5px 5px 0 0 var(--color-br-light),
@@ -44,7 +65,8 @@
       25px 25px 0 0 var(--color-br-light),
       0 0 0 30px var(--color-br-body),
       5px 5px 0 30px rgba(0, 0, 0, 0.3);
-   img {
+
+   & img {
       width: 100%;
       display: block;
    }
@@ -60,16 +82,59 @@
    pointer-events: none;
 }
 
+/* ===== INFO ===== */
+
 .profile-info {
    text-align: left;
    grid-column: 2 / 3;
    grid-row: 1 / 2;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
 }
+
+.profile-bio,
+.profile-name {
+   position: relative;
+   text-align: left;
+   padding: 28px 18px 14px;
+   background: var(--panel-bg);
+   box-shadow: var(--shadow-2);
+}
+
+.profile-name {
+   background: var(--name-bg);
+}
+
+.bio-tab {
+   position: absolute;
+   top: -14px;
+   left: 14px;
+   margin: 0;
+   padding: 2px 10px;
+   font-size: 1.1rem;
+   line-height: 1.2;
+   background: var(--tab-bg);
+   color: var(--tab-text);
+   box-shadow: var(--shadow);
+   text-transform: uppercase;
+}
+
+/* ===== SKILLS ===== */
 
 .profile-skills {
    grid-column: 3 / 4;
    grid-row: 1 / 2;
 }
+
+.profile-skills ul {
+   text-align: left;
+   margin: 0;
+   font-size: 0.75em;
+   list-style-type: square;
+}
+
+/* ===== START ===== */
 
 .profile-start {
    grid-column: 1 / 4;
@@ -77,16 +142,16 @@
    align-items: center;
    display: flex;
    flex-direction: column;
+   margin-top: 40px;
 }
 
 .profile-start-point-line {
-   height: 100%;
+   flex: 1;
    background-color: brown;
    width: 10px;
 }
 
 .profile-start-point {
-   position: static;
    height: 20px;
    width: 20px;
    box-shadow:
@@ -97,6 +162,8 @@
    background-color: brown;
 }
 
+/* ===== PIXEL CHART ===== */
+
 .pixel-chart {
    display: grid;
    width: 100%;
@@ -105,7 +172,7 @@
    column-gap: 5px;
    align-items: end;
    margin: 0 0 60px 0;
-   border-top: 2.5px dotted var(--color-6);
+   border-top: 2px dotted var(--color-6);
 }
 
 .pixel-chart-column-wrapper {
@@ -126,14 +193,10 @@
    bottom: -30px;
    left: 50%;
    transform: translateX(-50%);
+   white-space: nowrap;
 }
 
-ul {
-   text-align: left;
-   margin: 0;
-   font-size: 0.75em;
-   list-style-type: square;
-}
+/* ===== ANIMATIONS ===== */
 
 @keyframes growBar {
    from {
