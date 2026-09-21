@@ -35,7 +35,7 @@
 
 :root {
    --font-body: "Retron", "Inter", "Roboto", sans-serif;
-   --font-mono: "VT323", "Handjet", monospace;
+   --font-mono: "Handjet", monospace;
    --font-pixel: "fs", "Quinque", "Press Start 2P", "Bytesized", cursive;
    margin: 0;
    padding: 0;
@@ -51,7 +51,9 @@ body {
    text-rendering: optimizeLegibility;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-   transition: background-color 0.3s, color 0.3s;
+   transition:
+      background-color 0.3s,
+      color 0.3s;
 
    margin: 0;
    min-height: 100vh;
@@ -61,11 +63,11 @@ h1 {
    font-size: 2em;
    line-height: 1.1;
    margin: 0;
-   font-family: var(--font-body);
+   font-family: var(--font-pixel);
 }
 
 h2 {
-   font-size: 2em;
+   font-size: 3em;
    margin-top: 0px;
    margin-bottom: 30px;
    font-family: var(--font-pixel);
@@ -81,12 +83,19 @@ h3 {
 
 h4 {
    font-family: var(--font-pixel);
+   font-weight: 700;
    font-size: 1.6em;
    margin: 0;
+   text-transform: uppercase;
+   color: var(--color-accent-3);
 }
 
 span {
    font-family: var(--font-mono);
+}
+
+a {
+   text-decoration: none;
 }
 
 .tooltip {
@@ -119,8 +128,14 @@ span {
    color: #fff;
    margin: 10px;
    border: 0;
-   box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black,
-      0px 10px #00000038, 5px 5px #00000038, -5px 5px #00000038,
+   box-shadow:
+      0px 5px black,
+      0px -5px black,
+      5px 0px black,
+      -5px 0px black,
+      0px 10px #00000038,
+      5px 5px #00000038,
+      -5px 5px #00000038,
       inset 0px 5px rgba(255, 255, 255, 0.3);
    cursor: pointer;
    display: inline-block;
@@ -128,7 +143,11 @@ span {
 
 .btn:hover:active {
    transform: translateY(5px);
-   box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black,
+   box-shadow:
+      0px 5px black,
+      0px -5px black,
+      5px 0px black,
+      -5px 0px black,
       inset 0px 5px #00000038;
 }
 
@@ -155,8 +174,14 @@ body.dark-theme {
    .btn {
       background-color: #38667f;
       color: var(--color-bg);
-      box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black,
-         0px 10px #00000038, 5px 5px #00000038, -5px 5px #00000038,
+      box-shadow:
+         0px 5px black,
+         0px -5px black,
+         5px 0px black,
+         -5px 0px black,
+         0px 10px #00000038,
+         5px 5px #00000038,
+         -5px 5px #00000038,
          inset 0px 5px rgba(255, 255, 255, 0.1);
    }
 }
