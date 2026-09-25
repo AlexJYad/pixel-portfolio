@@ -5,14 +5,15 @@
    --name-bg: var(--color-bg-light-accent-1);
    --tab-bg: var(--color-accent-1);
    --tab-text: var(--color-text-gray);
+   --btn-bg: var(--color-accent-light-4);
 }
 
 /* ===== LIGHT-THEME ===== */
 .light-theme .profile-section {
    --panel-bg: var(--color-bg-light-accent-3);
-   /* --name-bg: var(--color-bg-light-accent-1); */
    --tab-bg: var(--color-accent-light-4);
    --tab-text: var(--color-bg-light-accent-3);
+   --btn-bg: var(--color-accent-light-3);
 }
 
 /* ===== LAYOUT ===== */
@@ -35,6 +36,7 @@
    grid-row: 1 / 2;
    justify-self: right;
    margin-top: 25px;
+   margin-right: 25px;
 }
 
 .profile-avatar-frame {
@@ -93,17 +95,12 @@
    justify-content: space-between;
 }
 
-.profile-bio,
-.profile-name {
+.profile-bio {
    position: relative;
    text-align: left;
    padding: 28px 18px 14px;
    background: var(--panel-bg);
    box-shadow: var(--shadow-2);
-}
-
-.profile-name {
-   background: var(--name-bg);
 }
 
 .bio-tab {
@@ -182,7 +179,7 @@
 }
 
 .pixel-chart-column-inner {
-   background-color: var(--color-accent-1);
+   background-color: var(--tab-bg);
    width: calc(100% - 10px);
    box-shadow: 10px 0 0 var(--color-6);
    height: 0;
@@ -209,4 +206,86 @@
 
 .pixel-chart-column-inner.animate {
    animation: growBar 1s ease-out forwards;
+}
+
+.profile-btns {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-items: center;
+   gap: 20px;
+}
+
+.profile-btn {
+   margin: 0;
+   padding: 10px;
+   text-align: center;
+}
+
+.profile-btn:last-child {
+   background-color: var(--btn-bg);
+}
+
+/* ===== PROFILE NAME ===== */
+
+.profile-title {
+   padding: 0px 20px;
+   text-align: left;
+   background: var(--name-bg);
+   color: var(--color-text);
+   box-shadow: var(--shadow-2);
+}
+
+.profile-name {
+   margin: 0;
+   font-size: 4rem;
+   line-height: 1;
+   text-wrap: balance;
+   text-shadow: 3px 3px 0 black;
+}
+
+.light-theme .profile-title {
+   --name-text: var(--color-bg-light-accent-1);
+   --name-shadow: var(--color-br-shadow);
+}
+
+/* ===== PROFILE ROLE (plaque) ===== */
+
+.profile-role {
+   display: inline-block;
+   margin: 16px 0 0;
+   padding: 4px 12px;
+   font-family: var(--font-mono);
+   font-size: 1.4rem;
+   background: var(--color-br-shadow);
+   color: var(--color-bg-light-accent-1);
+   box-shadow:
+      0 -5px 0 0 #000,
+      0 5px 0 0 #000,
+      -5px 0 0 0 #000,
+      5px 0 0 0 #000;
+}
+
+.profile-role::after {
+   content: "";
+   display: inline-block;
+   width: 0.5em;
+   height: 1em;
+   margin-left: 0.4em;
+   vertical-align: -0.15em;
+   background: var(--tab-bg);
+   animation: cursor-blink 1s steps(1) infinite;
+}
+
+@keyframes cursor-blink {
+   50% {
+      opacity: 0;
+   }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (prefers-reduced-motion: reduce) {
+   .profile-role::after {
+      animation: none;
+   }
 }
