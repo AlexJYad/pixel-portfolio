@@ -23,8 +23,6 @@ function App() {
       });
    };
 
-   const portfolioChunks = chunkArray(portfolioItems, 4);
-
    return (
       <>
          <Header language={language} toggleLanguage={cycleLanguage} />
@@ -35,15 +33,9 @@ function App() {
             <section className="section section-max" id="timeline">
                <TimelineSection items={experienceItems[language]} />
             </section>
-            {portfolioChunks.map((chunk, index) => (
-               <section
-                  className="section"
-                  key={index}
-                  id={index === 0 ? "portfolio" : undefined}
-               >
-                  <PortfolioSection items={chunk} language={language} />
-               </section>
-            ))}
+            <section className="section" id="portfolio">
+               <PortfolioSection items={portfolioItems} language={language} />
+            </section>
             <Footer />
          </div>
       </>

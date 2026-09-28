@@ -5,10 +5,16 @@
       "link": "https://github.com/AlexJYad/Yandex-Four-Knights-Club-Landing",
       "title": "♞ The Four Knights Club",
       "description": {
-         "EN": "Yandex.Practicum test assignment — pixel-perfect responsive layout built from a Figma design. A stylized promo landing page inspired by chapter XXXIV of Ilf and Petrov's novel The Twelve Chairs — the Vasyuki chess tournament, the 'Fruitful Opening Idea' lecture, and a simultaneous exhibition match on 160 boards.",
-         "RU": "Тестовое задание от Яндекс.Практикума — точная адаптивная вёрстка по дизайну из Figma. Стилизованный промо-лендинг по мотивам XXXIV главы романа Ильфа и Петрова «Двенадцать стульев» — васюковский шахматный турнир, лекция «Плодотворная дебютная идея» и сеанс одновременной игры на 160 досках.",
-         "ES": "Prueba técnica de Yandex.Practicum — maquetación responsive pixel-perfect a partir de un diseño en Figma. Landing page promocional inspirada en el capítulo XXXIV de la novela Las doce sillas de Ilf y Petrov — el torneo de ajedrez de Vasyuki, la conferencia «La fructífera idea inicial» y una partida simultánea en 160 tableros."
-      }
+         "EN": "Pixel-perfect responsive landing built from a Figma design.",
+         "RU": "Адаптивная pixel-perfect вёрстка по дизайну из Figma.",
+         "ES": "Landing responsive pixel-perfect a partir de un diseño en Figma."
+      },
+      "category": "Landing",
+      "tags": [
+         "Responsive",
+         "Pixel Perfect"
+      ],
+      "live": "https://alexjyad.github.io/Yandex-Four-Knights-Club-Landing/"
    },
    {
       "id": 2,
@@ -16,10 +22,16 @@
       "link": "https://github.com/AlexJYad/next-dnd",
       "title": "Alterras",
       "description": {
-         "EN": "Next.js 16 + Supabase companion app for a homebrew tabletop RPG: character sheets, world lore, interactive spell tree and GM tools. Full-stack rewrite of DnD-spellbook.",
-         "RU": "Приложение-компаньон на Next.js 16 + Supabase для авторской настольной ролевой игры: листы персонажей, лор мира, интерактивное дерево заклинаний и инструменты мастера. Полный full-stack переписанный DnD-spellbook.",
-         "ES": "Aplicación complementaria en Next.js 16 + Supabase para un juego de rol de mesa propio: fichas de personaje, lore del mundo, árbol de hechizos interactivo y herramientas para el máster. Reescritura full-stack de DnD-spellbook."
-      }
+         "EN": "Next.js + Supabase companion app for a homebrew tabletop RPG.",
+         "RU": "Приложение-компаньон на Next.js + Supabase для настольной RPG.",
+         "ES": "App complementaria en Next.js + Supabase para un JdR de mesa."
+      },
+      "category": "web app",
+      "tags": [
+         "Next.js",
+         "React",
+         "Full Stack"
+      ]
    },
    {
       "id": 3,
@@ -27,10 +39,14 @@
       "link": "https://github.com/AlexJYad/js-kamakura-food2",
       "title": "Kamakura Food",
       "description": {
-         "EN": "Dynamic menu & shopping cart for a Japanese restaurant landing page. Frontend training exercise — vanilla JS DOM manipulation, no frameworks.",
-         "RU": "Динамическое меню и корзина покупок для лендинга японского ресторана. Учебное фронтенд-упражнение — работа с DOM на чистом JS, без фреймворков.",
-         "ES": "Menú dinámico y carrito de compra para la landing page de un restaurante japonés. Ejercicio de práctica frontend — manipulación del DOM en JS puro, sin frameworks."
-      }
+         "EN": "Dynamic menu and cart, built with vanilla JS DOM manipulation.",
+         "RU": "Динамическое меню и корзина на чистом JS без фреймворков.",
+         "ES": "Menú dinámico y carrito, hecho con JS puro sin frameworks."
+      },
+      "category": "Landing",
+      "tags": [
+         "DOM"
+      ]
    },
    {
       "id": 4,
@@ -38,10 +54,14 @@
       "link": "https://github.com/AlexJYad/F5FLIX",
       "title": "F5FLIX",
       "description": {
-         "EN": "Netflix-style landing page & catalog — static HTML/CSS training exercise built during the Factoria F5 frontend bootcamp.",
-         "RU": "Лендинг и каталог в стиле Netflix — учебное упражнение на статичных HTML/CSS в рамках буткемпа Factoría F5.",
-         "ES": "Landing page y catálogo al estilo Netflix — ejercicio de práctica en HTML/CSS estático realizado durante el bootcamp de Factoría F5."
-      }
+         "EN": "Netflix-style landing and catalog, static HTML/CSS bootcamp exercise.",
+         "RU": "Лендинг и каталог в стиле Netflix — учебное упражнение на HTML/CSS.",
+         "ES": "Landing y catálogo estilo Netflix — ejercicio de HTML/CSS del bootcamp."
+      },
+      "category": "Landing",
+      "tags": [
+         "Responsive"
+      ]
    },
    {
       "id": 5,
@@ -49,10 +69,15 @@
       "link": "https://github.com/AlexJYad/BattleSimulator",
       "title": "Battle Simulator",
       "description": {
-         "EN": "An educational Java project that simulates battles between characters and manages their statistics using data structures such as HashMap, ArrayList, and Set. It includes file input/output, a simple text-based interface, and an interactive menu.",
-         "RU": "Учебный проект на Java, симулирующий сражения персонажей и управляющий их характеристиками с помощью структур данных HashMap, ArrayList и Set. Включает файловый ввод/вывод, текстовый интерфейс и интерактивное меню.",
-         "ES": "Proyecto educativo en Java que simula combates entre personajes y gestiona sus estadísticas mediante estructuras de datos como HashMap, ArrayList y Set. Incluye entrada/salida de archivos, una interfaz de texto sencilla y un menú interactivo."
-      }
+         "EN": "Java battle simulator using HashMap, ArrayList and Set.",
+         "RU": "Java-симулятор боёв на структурах HashMap, ArrayList и Set.",
+         "ES": "Simulador de combates en Java con HashMap, ArrayList y Set."
+      },
+      "category": "app",
+      "tags": [
+         "Java",
+         "OOP"
+      ]
    },
    {
       "id": 6,
@@ -60,9 +85,13 @@
       "link": "https://github.com/AlexJYad/Tu-Escape-Room-Web",
       "title": "Escape Room Web",
       "description": {
-         "EN": "Interactive GTA-themed browser escape room built in vanilla JS/HTML/CSS as part of a 3-person team; implemented core game logic, DOM-based state navigation, and win/lose flow.",
-         "RU": "Интерактивный браузерный escape room в тематике GTA, реализованный на чистых JS/HTML/CSS командой из 3 человек; отвечал за основную игровую логику, навигацию по состояниям через DOM и цикл победы/поражения.",
-         "ES": "Escape room interactivo en el navegador con temática de GTA, desarrollado en JS/HTML/CSS puro por un equipo de 3 personas; implementé la lógica principal del juego, la navegación de estados basada en el DOM y el flujo de victoria/derrota."
-      }
+         "EN": "GTA-themed browser escape room, built with a 3-person team.",
+         "RU": "Браузерный escape room в тематике GTA — командный проект.",
+         "ES": "Escape room de navegador con temática GTA, proyecto en equipo."
+      },
+      "category": "Landing",
+      "tags": [
+         "Team Project"
+      ]
    }
 ]

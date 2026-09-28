@@ -1,76 +1,276 @@
+/* =========================================================
+   TIMELINE — THEME VARIABLES
+   ========================================================= */
+
 .timeline-section {
+   --panel-bg: var(--color-bg-accent-2);
+   --header-bg: var(--color-bg-light-accent-1);
+
+   --tab-bg: var(--color-accent-1);
+   --tab-text: var(--color-text-gray);
+
+   --btn-bg: var(--color-accent-light-4);
+
+   --line-color: brown;
+   --line-width: 10px;
+
+   --dot-size: 20px;
+   --content-gap: 50px;
+
+   --details-duration: 0.5s;
+   --toggle-duration: 0.3s;
+
    position: relative;
+
+   width: 100%;
    max-width: 1200px;
-   margin: 0 auto;
+   min-width: 100%;
+   min-height: 100vh;
+
+   margin: 0;
 }
+
+/* =========================================================
+   LIGHT THEME
+   ========================================================= */
+
+.light-theme .timeline-section {
+   --panel-bg: var(--color-bg-light-accent-3);
+   --tab-bg: var(--color-accent-light-4);
+   --tab-text: var(--color-bg-light-accent-3);
+   --btn-bg: var(--color-accent-light-3);
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+.timeline-section,
+.timeline-container,
+.timeline-content {
+   box-sizing: border-box;
+}
+
+/* =========================================================
+   TIMELINE LINE
+   ========================================================= */
+
+.timeline-section::after {
+   content: "";
+
+   position: absolute;
+   z-index: -1;
+
+   top: 0;
+   left: 50%;
+
+   width: var(--line-width);
+   height: 100%;
+
+   margin-left: calc(var(--line-width) / -2);
+
+   background-color: var(--line-color);
+
+   transform-origin: top;
+   transform: scaleY(var(--progress, 0));
+
+   transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================================================
+   TIMELINE CONTAINER
+   ========================================================= */
 
 .timeline-container {
-   padding: 20px 0px;
    position: relative;
+
    width: 50%;
+
+   padding: 20px 0;
+
    scroll-snap-align: start;
-}
-
-.timeline-content {
-   margin: 0 50px;
-   padding: 20px 30px;
-   position: relative;
-   background: rgba(244, 244, 244, 0.3);
-}
-
-.timeline-container:nth-child(even) {
-   left: 50%;
 }
 
 .timeline-container:nth-child(odd) {
    left: 0;
 }
 
-.timeline-dot {
-   position: absolute;
-   width: 20px;
-   height: 15px;
-   right: -70px;
-   top: 32px;
-   z-index: 10;
-}
-
-.timeline-container:nth-child(even) .timeline-dot {
-   left: -70px;
-}
-
-.timeline-section::after {
-   content: "";
-   position: absolute;
-   background-color: brown;
-   width: 10px;
-   height: 100%;
-   top: 0;
+.timeline-container:nth-child(even) {
    left: 50%;
-   margin-left: -5px;
-   z-index: -1;
-   transition: transform 0.4s ease;
-
-   transform-origin: top;
-   transform: scaleY(var(--progress, 0));
 }
+
+/* =========================================================
+   TIMELINE CONTENT
+   ========================================================= */
 
 .timeline-content {
+   position: relative;
+
+   margin: 0 var(--content-gap);
+
+   background: rgba(244, 244, 244, 0.3);
+
+   box-shadow: var(--shadow-2);
+
    opacity: 0;
-   transition: opacity 1s 0.3s ease;
+
+   transition: opacity 1s ease 0.3s;
 }
 
 .timeline-container.is-visible .timeline-content {
    opacity: 1;
 }
 
-@media screen and (max-wight: 1000px) {
+/* =========================================================
+   TIMELINE DOT
+   ========================================================= */
+
+.timeline-dot {
+   position: absolute;
+   z-index: 10;
+
+   top: 15px;
+   right: -60px;
+
+   width: var(--dot-size);
+   height: 15px;
+
+   background-color: var(--tab-bg);
+
+   box-shadow: var(--shadow);
+}
+
+.timeline-container:nth-child(even) .timeline-dot {
+   right: auto;
+   left: -60px;
+}
+
+/* =========================================================
+   TIMELINE HEADER
+   ========================================================= */
+
+.timeline-header {
+   display: flex;
+
+   align-items: center;
+   justify-content: space-between;
+
+   padding: 3px 10px;
+
+   background-color: var(--header-bg);
+}
+
+.timeline-title {
+   color: white;
+}
+
+/* =========================================================
+   DETAILS
+   ========================================================= */
+
+.timeline-details summary {
+   list-style: none;
+   cursor: pointer;
+}
+
+.timeline-details summary::-webkit-details-marker {
+   display: none;
+}
+
+.timeline-details summary::marker {
+   content: "";
+}
+
+/* =========================================================
+   DETAILS CONTENT
+   ========================================================= */
+
+.timeline-details-content {
+   display: grid;
+
+   grid-template-rows: 0fr;
+
+   transition: grid-template-rows var(--details-duration) ease-in-out;
+}
+
+.timeline-details[open] .timeline-details-content {
+   grid-template-rows: 1fr;
+}
+
+.timeline-details-content > ul {
+   min-height: 0;
+
+   margin: 0;
+
+   overflow: hidden;
+}
+
+/* =========================================================
+   DETAILS OPEN STATE
+   ========================================================= */
+
+.timeline-details[open] .timeline-header {
+   border-bottom: solid 5px black;
+}
+
+/* =========================================================
+   COMPANY
+   ========================================================= */
+
+.timeline-company {
+   margin: 10px;
+
+   text-align: start;
+}
+
+.timeline-company-text {
+   padding: 5px;
+
+   background-color: var(--btn-bg);
+
+   box-shadow: var(--shadow-3);
+}
+
+/* =========================================================
+   LIST
+   ========================================================= */
+.timeline-details-content {
+   padding: 20px 15px;
+}
+
+.timeline-details-content ul li {
+   text-align: start;
+   list-style-type: square;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 1000px) {
    .timeline-section::after {
       left: 31px;
    }
+
    .timeline-container {
       width: 100%;
-      padding-left: 80px;
+
+      left: 0 !important;
+
       padding-right: 25px;
+      padding-left: 80px;
+   }
+
+   .timeline-dot {
+      right: auto;
+      left: 21px;
+   }
+
+   .timeline-container:nth-child(even) .timeline-dot {
+      left: 21px;
+   }
+
+   .timeline-content {
+      margin: 0;
    }
 }

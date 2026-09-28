@@ -1,8 +1,164 @@
+/* ===== THEME VARIABLES ===== */
+
+.portfolio-section {
+   --outline: 5px;
+   --btn-drop: #00000038;
+
+   --pf-btn-bg: var(--color-bg);
+   --pf-btn-outline: black;
+   --pf-btn-text: var(--color-accent-light-4);
+   --pf-btn-hover: var(--color-accent-1);
+
+   --pf-btn-on-bg: var(--color-accent-1);
+   --pf-btn-on-outline: var(--color-accent-light-4);
+   --pf-btn-on-text: var(--color-text);
+
+   --pf-indicator: var(--color-accent-light-4);
+}
+
+/* ===== LIGHT-THEME ===== */
+
+.light-theme .portfolio-section {
+   --pf-btn-bg: var(--color-accent-1);
+   --pf-btn-outline: black;
+   --pf-btn-text: var(--color-text);
+   --pf-btn-hover: var(--pf-btn-outline);
+
+   --pf-btn-on-bg: #ff0000;
+   --pf-btn-on-outline: #b30000;
+   --pf-btn-on-text: #fff;
+
+   --pf-indicator: var(--color-text-light);
+}
+
+/* ===== LAYOUT ===== */
+
+.portfolio-section {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.portfolio-filters-sticky {
+   z-index: 10;
+   padding: 12px 0;
+   flex-shrink: 0;
+}
+
+.portfolio-filters {
+   display: flex;
+   gap: 24px;
+   flex-wrap: wrap;
+   padding: 6px;
+}
+
 .portfolio-grid {
    display: grid;
-   grid-template-rows: 1fr 1fr;
-   grid-template-columns: 1fr 1fr;
-   grid-column-gap: 20px;
-   grid-row-gap: 20px;
-   align-items: start;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   grid-gap: 20px;
+   margin-top: 10px;
+   margin-bottom: 25px;
+   flex: 1;
+   min-height: 0;
+}
+
+.portfolio-pagination {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 24px;
+   flex-shrink: 0;
+   margin-bottom: 14px;
+   padding: 6px;
+}
+
+/* ===== BUTTONS ===== */
+
+.filter-btn,
+.page-btn {
+   --o: var(--pf-btn-outline);
+
+   display: inline-flex;
+   align-items: center;
+   gap: 8px;
+   font-family: inherit;
+   font-size: 16px;
+   font-weight: bold;
+   letter-spacing: 1px;
+   line-height: 1.2;
+   padding: 10px 20px;
+   border: 0;
+   cursor: pointer;
+   background-color: var(--pf-btn-bg);
+   color: var(--pf-btn-text);
+   transition:
+      color 0.2s,
+      box-shadow 0.2s,
+      transform 0.05s;
+
+   box-shadow:
+      0 var(--outline) var(--o),
+      0 calc(-1 * var(--outline)) var(--o),
+      var(--outline) 0 var(--o),
+      calc(-1 * var(--outline)) 0 var(--o),
+      0 calc(2 * var(--outline)) var(--btn-drop),
+      var(--outline) var(--outline) var(--btn-drop),
+      calc(-1 * var(--outline)) var(--outline) var(--btn-drop);
+}
+
+/* ===== BUTTONS: HOVER ===== */
+
+.filter-btn:hover,
+.filter-btn:focus-visible,
+.page-btn:hover:not(:disabled),
+.page-btn:focus-visible:not(:disabled) {
+   --o: var(--pf-btn-hover);
+   color: var(--o);
+   outline: none;
+}
+
+/* ===== BUTTONS: ACTIVE (PRESSED) ===== */
+
+.filter-btn:active,
+.page-btn:active:not(:disabled) {
+   transform: translateY(var(--outline));
+   box-shadow:
+      0 var(--outline) var(--o),
+      0 calc(-1 * var(--outline)) var(--o),
+      var(--outline) 0 var(--o),
+      calc(-1 * var(--outline)) 0 var(--o);
+}
+
+/* ===== FILTER: SELECTED ===== */
+
+.filter-btn.active {
+   --o: var(--pf-btn-on-outline);
+   background-color: var(--pf-btn-on-bg);
+   color: var(--pf-btn-on-text);
+   transform: translateY(var(--outline));
+   box-shadow:
+      0 var(--outline) var(--o),
+      0 calc(-1 * var(--outline)) var(--o),
+      var(--outline) 0 var(--o),
+      calc(-1 * var(--outline)) 0 var(--o);
+}
+
+/* ===== PAGINATION ===== */
+
+.page-btn {
+   min-width: 7em;
+   justify-content: center;
+}
+
+.page-btn:disabled {
+   opacity: 0.4;
+   cursor: not-allowed;
+}
+
+.page-indicator {
+   font-family: inherit;
+   font-size: 16px;
+   font-weight: bold;
+   color: var(--pf-indicator);
 }

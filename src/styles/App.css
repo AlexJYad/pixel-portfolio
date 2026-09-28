@@ -22,7 +22,7 @@ header {
 .section {
    height: calc(100vh - 6em);
    scroll-snap-align: start;
-   display: flex;
+   display: stretch;
    align-items: center;
    justify-content: center;
    margin: 0 10%;

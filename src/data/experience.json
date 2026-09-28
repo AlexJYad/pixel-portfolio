@@ -62,6 +62,14 @@
             "Level 2 Professional Certificate (Certificado de Profesionalidad) in Web Page Publishing and Development.",
             "Studied HTML/CSS/JS, Angular, and Tailwind CSS."
          ]
+      },
+      {
+         "date": "2026",
+         "title": "To be continued",
+         "company": "Open to work",
+         "bullets": [
+            "Personal projects"
+         ]
       }
    ],
    "RU": [
@@ -127,6 +135,14 @@
             "Профессиональный сертификат уровня 2 (Certificado de Profesionalidad) по публикации и разработке веб-страниц.",
             "Изучал HTML/CSS/JS, Angular и Tailwind CSS."
          ]
+      },
+      {
+         "date": "2026",
+         "title": "Продолжение следует",
+         "company": "В поиске работы",
+         "bullets": [
+            "Личные проекты"
+         ]
       }
    ],
    "ES": [
@@ -191,6 +207,14 @@
          "bullets": [
             "Certificado de Profesionalidad de Nivel 2 en Publicación y Desarrollo de Páginas Web.",
             "Estudié HTML/CSS/JS, Angular y Tailwind CSS."
+         ]
+      },
+      {
+         "date": "2026",
+         "title": "Continuará",
+         "company": "Disponible para trabajar",
+         "bullets": [
+            "Proyectos personales"
          ]
       }
    ]

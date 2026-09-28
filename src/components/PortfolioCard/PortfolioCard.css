@@ -1,37 +1,243 @@
+/* ===== THEME VARIABLES ===== */
+
+.portfolio-card {
+   --outline: 3px;
+   --card-drop: #00000038;
+
+   --card-accent: var(--color-accent-3);
+   --card-bg: var(--color-bg-accent-2);
+   --text: var(--color-text);
+   --card-tag-bg: transparent;
+
+   --card-live-bg: var(--color-accent-1);
+   --card-live-outline: var(--color-accent-light-4);
+   --card-live-text: var(--color-text);
+
+   --card-code-bg: var(--color-bg);
+   --card-code-outline: var(--color-bg-accent-1);
+   --card-code-text: var(--color-accent-light-4);
+   --card-code-hover: #b8860b;
+
+   --badge-bg: #e0435a;
+   --badge-text: #fff;
+   --badge-border: #1e2029;
+
+   --shadow-card:
+      0 var(--outline) var(--card-accent),
+      0 calc(-1 * var(--outline)) var(--card-accent),
+      var(--outline) 0 var(--card-accent),
+      calc(-1 * var(--outline)) 0 var(--card-accent);
+}
+
+/* ===== LIGHT-THEME ===== */
+
+.light-theme .portfolio-card {
+   --card-accent: var(--color-accent-light-4);
+   --card-bg: var(--color-bg-light-accent-3);
+   --text: var(--color-text-light);
+   --card-tag-bg: var(--color-bg-light-accent-2);
+
+   --card-live-bg: #ff0000;
+   --card-live-outline: #b30000;
+   --card-live-text: #fff;
+
+   --card-code-bg: var(--color-accent-1);
+   --card-code-outline: var(--color-accent-light-4);
+   --card-code-text: var(--color-text);
+   --card-code-hover: var(--card-code-outline);
+}
+
+/* ===== CARD ===== */
+
 .portfolio-card {
    position: relative;
    width: 100%;
-   display: block;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   background: var(--card-bg);
+   border: var(--outline) solid var(--card-accent);
    box-shadow: var(--shadow);
    overflow: hidden;
 }
 
-.portfolio-card-img {
-   width: 100%;
-   object-fit: cover;
-   height: 100%;
-   display: block;
+/* ===== BADGE ===== */
+
+.portfolio-card-badge {
+   position: absolute;
+   top: -0.6em;
+   right: 1.2em;
+   background: var(--badge-bg);
+   color: var(--badge-text);
+   font-size: 0.6em;
+   padding: 0.3em 0.6em;
+   border: 2px solid var(--badge-border);
+   z-index: 2;
 }
+
+/* ===== TITLEBAR ===== */
+
+.portfolio-card-titlebar {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background: var(--card-accent);
+   padding: 0.5em 0.8em;
+   font-size: 1em;
+   font-weight: bold;
+   color: var(--text);
+}
+
+.portfolio-card-controls {
+   display: flex;
+   gap: 0.3em;
+}
+
+.portfolio-card-btn {
+   width: 0.8em;
+   height: 0.8em;
+   background: var(--card-bg);
+}
+
+/* ===== BODY ===== */
+
+.portfolio-card-body {
+   flex: 1;
+   display: flex;
+   align-items: stretch;
+   gap: 1em;
+   padding: 1em;
+   min-height: 0;
+}
+
+.portfolio-card-img {
+   width: 50%;
+   height: 100%;
+   object-fit: cover;
+   box-shadow: var(--shadow-3);
+}
+
+/* ===== TEXT ===== */
 
 .portfolio-card-text {
-   position: absolute;
-   inset: 0;
+   width: 50%;
    display: flex;
    flex-direction: column;
-   justify-content: end;
-   align-items: center;
-   text-align: center;
-   padding: 1em;
-   background: rgba(0, 0, 0, 0.75);
-   color: #fff;
-   opacity: 0;
-   transform: translateY(50px);
-   transition:
-      opacity 0.3s ease,
-      transform 0.5s ease;
+   gap: 0.8em;
+   min-height: 0;
 }
 
-.portfolio-card:hover .portfolio-card-text {
-   opacity: 1;
-   transform: translateY(0px);
+.portfolio-card-text h3 {
+   margin: 0;
+   color: var(--card-accent);
+}
+
+.portfolio-card-description {
+   font-size: 0.85em;
+   line-height: 1.5;
+   text-align: start;
+   color: var(--text);
+
+   display: -webkit-box;
+   -webkit-line-clamp: 4;
+   line-clamp: 4;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+}
+
+.portfolio-card-tags,
+.portfolio-card-links {
+   flex-shrink: 0;
+}
+
+/* ===== TAGS ===== */
+
+.portfolio-card-tags {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 0.7em;
+   margin-top: auto;
+}
+
+.portfolio-card-tag {
+   font-size: 1.1em;
+   font-family: var(--font-pixel);
+   padding: 0 0.5em;
+   background: var(--card-accent);
+   color: var(--card-bg);
+   box-shadow: none;
+}
+
+/* ===== BUTTONS ===== */
+
+.portfolio-card-links {
+   display: flex;
+   gap: 0.9em;
+}
+
+.portfolio-card-link {
+   --o: var(--card-live-outline);
+
+   font-size: 0.75em;
+   padding: 0.5em 0.9em;
+   text-decoration: none;
+   font-weight: bold;
+   cursor: pointer;
+   display: inline-block;
+   transition:
+      color 0.2s,
+      box-shadow 0.2s,
+      transform 0.05s;
+
+   box-shadow:
+      0 var(--outline) var(--o),
+      0 calc(-1 * var(--outline)) var(--o),
+      var(--outline) 0 var(--o),
+      calc(-1 * var(--outline)) 0 var(--o),
+      0 calc(2 * var(--outline)) var(--card-drop),
+      var(--outline) var(--outline) var(--card-drop),
+      calc(-1 * var(--outline)) var(--outline) var(--card-drop);
+}
+
+.portfolio-card-link--live {
+   --o: var(--card-live-outline);
+   background-color: var(--card-live-bg);
+}
+
+.portfolio-card-link--code {
+   --o: var(--card-code-outline);
+   background-color: var(--card-code-bg);
+}
+
+a.portfolio-card-link--live {
+   color: var(--card-live-text);
+}
+
+a.portfolio-card-link--code {
+   color: var(--card-code-text);
+}
+
+/* ===== BUTTONS: HOVER ===== */
+
+a.portfolio-card-link--live:hover,
+a.portfolio-card-link--live:focus-visible {
+   --o: var(--card-live-outline);
+   color: var(--o);
+}
+
+a.portfolio-card-link--code:hover,
+a.portfolio-card-link--code:focus-visible {
+   --o: var(--card-code-hover);
+   color: var(--o);
+}
+
+/* ===== BUTTONS: ACTIVE ===== */
+
+a.portfolio-card-link:active {
+   transform: translateY(var(--outline));
+   box-shadow:
+      0 var(--outline) var(--o),
+      0 calc(-1 * var(--outline)) var(--o),
+      var(--outline) 0 var(--o),
+      calc(-1 * var(--outline)) 0 var(--o);
 }
