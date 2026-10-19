@@ -16,6 +16,7 @@
 
    --dot-size: 20px;
    --content-gap: 50px;
+   --content-bg: var(--color-bg-accent-2);
 
    --details-duration: 0.5s;
    --toggle-duration: 0.3s;
@@ -39,6 +40,7 @@
    --tab-bg: var(--color-accent-light-4);
    --tab-text: var(--color-bg-light-accent-3);
    --btn-bg: var(--color-accent-light-3);
+   --content-bg: var(--color-bg-light-accent-3);
 }
 
 /* =========================================================
@@ -108,7 +110,7 @@
 
    margin: 0 var(--content-gap);
 
-   background: rgba(244, 244, 244, 0.3);
+   background: var(--content-bg);
 
    box-shadow: var(--shadow-2);
 

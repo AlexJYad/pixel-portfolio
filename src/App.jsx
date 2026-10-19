@@ -1,6 +1,6 @@
 import "./styles/App.css";
 import "./styles/colors.css";
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ProfileSection from "./components/ProfileSection/ProfileSection";
@@ -8,7 +8,7 @@ import TimelineSection from "./components/TimelineSection/TimelineSection";
 import experienceItems from "./data/experience.json";
 import PortfolioSection from "./components/PortfolioSection/PortfolioSection";
 import portfolioItems from "./data/portfolioItems.json";
-import chunkArray from "./utils/chunkArray";
+import ContactSection from "./components/ContactSection/ContactSection";
 
 const LANGUAGES = ["EN", "RU", "ES"];
 
@@ -35,6 +35,9 @@ function App() {
             </section>
             <section className="section" id="portfolio">
                <PortfolioSection items={portfolioItems} language={language} />
+            </section>
+            <section>
+               <ContactSection language={language} />
             </section>
             <Footer />
          </div>

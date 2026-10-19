@@ -4,7 +4,7 @@
    --outline: 3px;
    --card-drop: #00000038;
 
-   --card-accent: var(--color-accent-3);
+   --card-accent: var(--color-bg-light-accent-1);
    --card-bg: var(--color-bg-accent-2);
    --text: var(--color-text);
    --card-tag-bg: transparent;
@@ -32,7 +32,6 @@
 /* ===== LIGHT-THEME ===== */
 
 .light-theme .portfolio-card {
-   --card-accent: var(--color-accent-light-4);
    --card-bg: var(--color-bg-light-accent-3);
    --text: var(--color-text-light);
    --card-tag-bg: var(--color-bg-light-accent-2);
@@ -56,7 +55,6 @@
    display: flex;
    flex-direction: column;
    background: var(--card-bg);
-   border: var(--outline) solid var(--card-accent);
    box-shadow: var(--shadow);
    overflow: hidden;
 }
@@ -85,7 +83,8 @@
    padding: 0.5em 0.8em;
    font-size: 1em;
    font-weight: bold;
-   color: var(--text);
+   color: var(--color-text);
+   border-bottom: 5px solid black;
 }
 
 .portfolio-card-controls {
